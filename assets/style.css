@@ -651,6 +651,9 @@
     margin: 10px auto !important;
     max-width: 1120px;
   }
+  .game {
+    height: auto !important;
+  }
 }
 
 @media (min-width: 1540px) and (max-width: 1919px) {
@@ -1117,7 +1120,7 @@
   display: flex;
   border-radius: 5px;
   border: 1px solid #ffd762;
-  padding: 10px;
+  padding: 15px 10px;
   gap: 10px;
   background: #200927;
   color: #f7d261;
@@ -1127,6 +1130,45 @@
   font-weight: 400;
   line-height: normal;
   text-decoration: none;
+  overflow: hidden;
+  position: relative;
+}
+
+@keyframes shimmer {
+  0%,
+  100% {
+    background-position: 0% 0%;
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    background-position: 0% 100%;
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+}
+
+.account-action-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+
+    rgba(150, 14, 137, 0) 0%,
+    rgba(150, 14, 137, 0.8) 50%,
+    rgba(150, 14, 137, 0) 100%
+  );
+  background-size: 100% 200%;
+  animation: shimmer 4s infinite;
+  z-index: 1;
 }
 
 .account-action-btn.click {
@@ -10528,6 +10570,7 @@ th {
   justify-content: space-between;
   border-bottom: 1px solid #6a3f3a;
   padding-bottom: 5px;
+  gap: 5px;
 }
 
 .section-followers .hidden-info {
@@ -10925,6 +10968,9 @@ th {
 }
 @media (min-width: 2048px) and (max-width: 2560px) {
   .battleroom-background.stockvsstock-open-enter {
+    height: 100vh !important;
+  }
+  .game {
     height: 100vh !important;
   }
 }
