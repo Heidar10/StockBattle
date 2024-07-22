@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <link rel="stylesheet" href="./assets/reset.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <div class="background-authorization background-registration">
+      <section>
+        <div class="container">
+          <div class="registration">
+            <img
+              src="./assets/images/login/logo_2.svg"
+              alt=""
+              class="authorization-logo"
+            />
+            <p class="authorization-title">
+              Join now for Real Money on <br />
+              <span class="span">Live Casino stockbattle</span>
+            </p>
+
+            <form class="login-form">
+              <div class="form-input">
+                <input
+                  type="text"
+                  class="form-input-item"
+                  placeholder="First Name*"
+                />
+                <input
+                  type="text"
+                  class="form-input-item"
+                  placeholder="Last Name*"
+                />
+                <input
+                  type="text"
+                  class="form-input-item"
+                  placeholder="Nickname*"
+                />
+
+                <div class="phone-input">
+                  <div class="country-code">
+                    <div id="selectedCountry" onclick="toggleCountryList('+1')">
+                      <img
+                        src="https://cdn.countryflags.com/thumbs/united-states-of-america/flag-400.png"
+                        alt="US Flag"
+                      />
+                      +1
+                    </div>
+                    <div class="country-list">
+                      <div onclick="selectCountry('+1')">
+                        <img
+                          src="https://cdn.countryflags.com/thumbs/united-states-of-america/flag-400.png"
+                          alt="US Flag"
+                        />
+                        +1
+                      </div>
+                      <div onclick="selectCountry('+44')">
+                        <img
+                          src="https://cdn.countryflags.com/thumbs/united-kingdom/flag-400.png"
+                          alt="UK Flag"
+                        />
+                        +44
+                      </div>
+                      <div onclick="selectCountry('+33')">
+                        <img
+                          src="https://cdn.countryflags.com/thumbs/france/flag-400.png"
+                          alt="France Flag"
+                        />
+                        +33
+                      </div>
+                    </div>
+                  </div>
+                  <input
+                    type="text"
+                    id="phoneNumber"
+                    value="+1"
+                    class="phone-number"
+                    placeholder="Номер телефона"
+                  />
+                </div>
+
+                <input
+                  type="email"
+                  class="form-input-item"
+                  placeholder="Email*"
+                />
+
+                <input
+                  type="password"
+                  class="form-input-item"
+                  placeholder="Password*"
+                />
+              </div>
+
+              <a
+                href="./success-registration.html"
+                class="login-btn"
+                onclick="getPhoneNumber()"
+                >Join Now</a
+              >
+
+              <p
+                class="clue choice"
+                style="padding-bottom: 10px; justify-content: center"
+              >
+                <input type="checkbox" id="idCardCheckbox1" />
+                <label for="idCardCheckbox1" class="desc white">
+                  I certify that I am 18 years or older
+                </label>
+              </p>
+            </form>
+
+            <footer class="login-footer">
+              <p class="footer-title">Regulations & Partners</p>
+              <img
+                src="./assets/images/login/partners.svg"
+                style="inline-size: fit-content"
+                alt=""
+              />
+              <p class="footer-copyright">
+                © 2024 StockBattle. All rights reserved.
+              </p>
+            </footer>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+  <script src="./assets/script.js"></script>
+</html>

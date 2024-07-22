@@ -1,0 +1,1981 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viproom create 2 stocks</title>
+    <link rel="stylesheet" href="./assets/reset.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700;900&family=Montserrat:wght@400;700&family=Sawarabi+Mincho&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="loader-background">
+      <div class="loader-wrapper">
+        <img src="./assets/images/icons/logo_preloader.svg" alt="" />
+        <div class="loader"></div>
+      </div>
+    </div>
+    <div class="block battleroom-open-enter">
+      <header class="header">
+        <div class="container">
+          <div class="id-player">
+            <img src="./assets/images/battleroom-open/player.svg" alt="" />
+            <p class="id-player-desc">
+              Davis <br />
+              <span style="color: #f8d05f; font-size: 16px">#2114968</span>
+            </p>
+          </div>
+
+          <div class="account">
+            <img src="./assets/images/battleroom-open/shield.svg" alt="" />
+            <p class="account-info">
+              <span style="color: #ff3449">Account not verified</span> <br />
+              <a href="#" onclick="showNextPopup('firstPopup')">Verify Now</a>
+            </p>
+          </div>
+          <button class="aside-btn"><p class="desc">Marshal</p></button>
+
+          <div id="firstPopup" class="popup prompt-container-verification">
+            <form>
+              <div class="prompt-content">
+                <img
+                  src="./assets/images/battleroom-open/plus.svg"
+                  class="prompt-icon prompt-icon-plus-ver"
+                  alt=""
+                />
+                <img
+                  src="./assets/images/verification/verification.svg"
+                  class="prompt-icon"
+                  alt=""
+                />
+                <p class="prompt-title" style="padding: 0">
+                  Let's get you verified
+                </p>
+                <p class="prompt-desc white">
+                  Before you start, prepare your identity document and make sure
+                  it is valid.
+                </p>
+                <p class="prompt-desc white">
+                  We also require you to agree to the processing of your
+                  personal data:
+                </p>
+                <p
+                  class="prompt-desc white"
+                  style="font-size: 16px; font-weight: 500"
+                >
+                  I'm a resident or live in:
+                </p>
+                <div class="verify-block-checkmark">
+                  <div class="choice">
+                    <input type="checkbox" id="idCardCheckbox1" />
+                    <label for="idCardCheckbox1" class="desc white"
+                      >United States Of America
+                    </label>
+                  </div>
+                  <div class="choice">
+                    <input type="checkbox" id="idCardCheckbox2" />
+                    <label for="idCardCheckbox2" class="desc white"
+                      >Other</label
+                    >
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  class="btn-continue"
+                  onclick="hidePopup('firstPopup'); showNextPopup('secondPopup')"
+                >
+                  Continue
+                </button>
+              </div>
+            </form>
+          </div>
+          <div id="secondPopup" class="popup prompt-container-verification">
+            <form>
+              <div class="prompt-content">
+                <img
+                  src="./assets/images/battleroom-open/plus.svg"
+                  class="prompt-icon prompt-icon-plus-ver"
+                  alt=""
+                />
+                <img
+                  src="./assets/images/verification/verification.svg"
+                  class="prompt-icon"
+                  alt=""
+                />
+                <p class="prompt-title" style="padding: 0">
+                  Let's get you verified
+                </p>
+                <p class="desc white" style="padding: 0; text-align: center">
+                  Identity document
+                </p>
+                <img
+                  src="./assets/images/verification/step-1.svg"
+                  class="prompt-icon"
+                  alt=""
+                />
+                <p class="desc white">Select issuing country</p>
+                <div class="dropdown-country">
+                  <button onclick="toggleDropdown()" class="dropbtn">
+                    <img
+                      src="./assets/images/flags/usa.svg"
+                      style="height: 25px"
+                      alt=""
+                    />
+                    United States
+                    <div class="ver-aroow">
+                      <img
+                        src="./assets/images/verification/arrow.svg"
+                        alt=""
+                      />
+                    </div>
+                  </button>
+                </div>
+                <p class="desc white">Choose your document type</p>
+                <div class="verify-block-checkmark">
+                  <div class="choice">
+                    <input type="checkbox" id="idCardCheckbox3" />
+                    <label for="idCardCheckbox3" class="desc white"
+                      >ID card
+                    </label>
+                  </div>
+                  <div class="choice">
+                    <input type="checkbox" id="idCardCheckbox4" />
+                    <label for="idCardCheckbox4" class="desc white"
+                      >Passport</label
+                    >
+                  </div>
+                  <div class="choice">
+                    <input type="checkbox" id="idCardCheckbox5" />
+                    <label for="idCardCheckbox5" class="desc white"
+                      >Residence permit</label
+                    >
+                  </div>
+                  <div class="choice">
+                    <input type="checkbox" id="idCardCheckbox6" />
+                    <label for="idCardCheckbox6" class="desc white"
+                      >Driver`slicense</label
+                    >
+                  </div>
+                </div>
+                <p class="desc white">The document should be:</p>
+                <p class="desc white">- bright and clear,</p>
+                <p class="desc white">
+                  - all corners of the document should be visible.
+                </p>
+                <div class="upload">
+                  <input type="file" id="fileInput" name="fileInput" />
+                  <label for="fileInput">
+                    <img
+                      class="upload-img"
+                      src="./assets/images/verification/upload.svg"
+                      alt="Загрузить файл"
+                    />
+                  </label>
+                </div>
+                <button
+                  type="button"
+                  class="btn-continue"
+                  onclick="hidePopup('secondPopup'); showNextPopup('thirdPopup')"
+                >
+                  Next
+                </button>
+              </div>
+            </form>
+          </div>
+          <div id="thirdPopup" class="popup prompt-container-verification">
+            <form>
+              <div class="prompt-content">
+                <img
+                  src="./assets/images/battleroom-open/plus.svg"
+                  class="prompt-icon prompt-icon-plus-ver"
+                  alt=""
+                />
+                <img
+                  src="./assets/images/verification/verification.svg"
+                  class="prompt-icon"
+                  alt=""
+                />
+                <p class="prompt-title" style="padding: 0">Step 2</p>
+                <p class="desc white" style="padding: 0; text-align: center">
+                  Email verification
+                </p>
+                <img
+                  src="./assets/images/verification/step-2.svg"
+                  class="prompt-icon"
+                  alt=""
+                />
+                <p class="desc white">Enter your email</p>
+                <input
+                  type="email"
+                  name=""
+                  class="input-email"
+                  placeholder="Email*"
+                  id=""
+                />
+                <div class="verification-code-block">
+                  <input
+                    type="text"
+                    placeholder="_ _ _ _"
+                    class="enter-code"
+                    maxlength="4"
+                    pattern="[0-9]{4}"
+                  />
+                  <button type="submit" class="send-code">Send code</button>
+                </div>
+                <button
+                  type="button"
+                  class="btn-continue"
+                  onclick="hidePopup('thirdPopup'); showNextPopup('fourthPopup')"
+                >
+                  Continue
+                </button>
+              </div>
+            </form>
+          </div>
+          <div id="fourthPopup" class="popup prompt-container-verification">
+            <div class="prompt-content">
+              <div class="confetti">
+                <div class="successfully-verified">
+                  <img
+                    src="./assets/images/verification/verification.svg"
+                    class="prompt-icon"
+                    style="margin: 0 auto"
+                    alt=""
+                  />
+                  <p class="prompt-title" style="padding: 0">
+                    Successfully verified
+                  </p>
+                  <p class="desc white" style="padding: 0; text-align: center">
+                    You are now verified!
+                  </p>
+                  <a
+                    href="./battleroom-live.html"
+                    class="btn-continue"
+                    onclick="hidePopup('fourthPopup')"
+                  >
+                    Ok
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="account-action">
+            <div class="account-balance">
+              <a href="#" class="main-balance-btn" style="color: #fff">
+                <img src="./assets/images/battleroom-open/bank.svg" alt="" />
+                <p class="desc">Main <br />Balance</p>
+                <p class="desc green">₮ 1,000</p>
+              </a>
+              <hr class="table-hr" />
+              <div class="row2">
+                <a href="#" class="score-points-btn">
+                  <img src="./assets/images/icons/cup.svg" alt="" />
+                  <p class="desc">
+                    Score Points
+                    <br />
+                    <span class="green"> ✪ 234572</span>
+                  </p>
+                </a>
+                <hr class="hr-vertical" />
+                <a href="#" class="battlecoin-btn">
+                  <img src="./assets/images/icons/battlecoine.svg" alt="" />
+                  <p class="desc">
+                    Battle coin
+                    <br />
+                    <span class="green"> 100</span>
+                  </p>
+                </a>
+              </div>
+            </div>
+            <a href="./deposit.html" class="account-action-btn"
+              ><img
+                src="./assets/images/battleroom-open/deposit.svg"
+                alt=""
+              />Deposit</a
+            >
+            <a href="./withdrawal.html" class="account-action-btn"
+              ><img
+                src="./assets/images/battleroom-open/withdrawal.svg"
+                alt=""
+              />Withdrawal</a
+            >
+            <a href="./transactions.html" class="account-action-btn"
+              ><img
+                src="./assets/images/battleroom-open/transaction.svg"
+                alt=""
+              />Tranactions</a
+            >
+            <a
+              href="./personal-settings-notverified.html"
+              class="account-action-btn"
+              ><img
+                src="./assets/images/battleroom-open/settings.svg"
+                alt=""
+              />Personal Settings</a
+            >
+            <a href="./mybattles.html" class="account-action-btn"
+              ><img src="./assets/images/battleroom-open/battle.svg" alt="" />
+              My Battles</a
+            >
+            <a href="./leaderboard.html" class="account-action-btn"
+              ><img src="./assets/images/battleroom-open/crown.svg" alt="" />
+              Leaderboard</a
+            >
+            <a href="./followers.html" class="account-action-btn"
+              ><img src="./assets/images/icons/people.svg" alt="" />
+              Followers</a
+            >
+            <a href="./support.html" class="account-action-btn"
+              ><img src="./assets/images/battleroom-open/support.svg" alt="" />
+              Support</a
+            >
+          </div>
+        </div>
+      </header>
+      <header class="header-adaptive">
+        <div class="container">
+          <div class="header-container">
+            <div class="id-player">
+              <img src="./assets/images/battleroom-open/player.svg" alt="" />
+              <p class="id-player-desc">
+                Davis <br />
+                <span style="color: #f8d05f; font-size: 16px">#2114968</span>
+              </p>
+            </div>
+            <div class="burger-menu">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+          </div>
+
+          <div class="account-action-adaptive">
+            <div class="account">
+              <img src="./assets/images/battleroom-open/shield.svg" alt="" />
+              <p class="account-info">
+                <span style="color: #ff3449">Account not verified</span> <br />
+                <a href="#" onclick="showNextPopup('fifthPopup')">Verify Now</a>
+              </p>
+            </div>
+            <button class="aside-btn"><p class="desc">Marshal</p></button>
+
+            <div id="fifthPopup" class="popup prompt-container-verification">
+              <form>
+                <div class="prompt-content">
+                  <img
+                    src="./assets/images/battleroom-open/plus.svg"
+                    class="prompt-icon prompt-icon-plus-ver"
+                    alt=""
+                  />
+                  <img
+                    src="./assets/images/verification/verification.svg"
+                    class="prompt-icon"
+                    alt=""
+                  />
+                  <p class="prompt-title" style="padding: 0">
+                    Let's get you verified
+                  </p>
+                  <p class="prompt-desc white">
+                    Before you start, prepare your identity document and make
+                    sure it is valid.
+                  </p>
+                  <p class="prompt-desc white">
+                    We also require you to agree to the processing of your
+                    personal data:
+                  </p>
+                  <p
+                    class="prompt-desc white"
+                    style="font-size: 16px; font-weight: 500"
+                  >
+                    I'm a resident or live in:
+                  </p>
+                  <div class="verify-block-checkmark">
+                    <div class="choice">
+                      <input type="checkbox" id="idCardCheckbox1" />
+                      <label for="idCardCheckbox1" class="desc white"
+                        >United States Of America
+                      </label>
+                    </div>
+                    <div class="choice">
+                      <input type="checkbox" id="idCardCheckbox2" />
+                      <label for="idCardCheckbox2" class="desc white"
+                        >Other</label
+                      >
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    class="btn-continue"
+                    onclick="hidePopup('fifthPopup'); showNextPopup('sixthPopup')"
+                  >
+                    Continue
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div id="sixthPopup" class="popup prompt-container-verification">
+              <form>
+                <div class="prompt-content">
+                  <img
+                    src="./assets/images/battleroom-open/plus.svg"
+                    class="prompt-icon prompt-icon-plus-ver"
+                    alt=""
+                  />
+                  <img
+                    src="./assets/images/verification/verification.svg"
+                    class="prompt-icon"
+                    alt=""
+                  />
+                  <p class="prompt-title" style="padding: 0">
+                    Let's get you verified
+                  </p>
+                  <p class="desc white" style="padding: 0; text-align: center">
+                    Identity document
+                  </p>
+                  <img
+                    src="./assets/images/verification/step-1.svg"
+                    class="prompt-icon"
+                    alt=""
+                  />
+                  <p class="desc white">Select issuing country</p>
+                  <!---->
+                  <div class="dropdown-country">
+                    <button onclick="toggleDropdown()" class="dropbtn">
+                      <img
+                        src="./assets/images/flags/usa.svg"
+                        style="height: 25px"
+                        alt=""
+                      />
+                      United States
+                      <div class="ver-aroow">
+                        <img
+                          src="./assets/images/verification/arrow.svg"
+                          alt=""
+                        />
+                      </div>
+                    </button>
+                  </div>
+                  <p class="desc white">Choose your document type</p>
+                  <div class="verify-block-checkmark">
+                    <div class="choice">
+                      <input type="checkbox" id="idCardCheckbox3" />
+                      <label for="idCardCheckbox3" class="desc white"
+                        >ID card
+                      </label>
+                    </div>
+                    <div class="choice">
+                      <input type="checkbox" id="idCardCheckbox4" />
+                      <label for="idCardCheckbox4" class="desc white"
+                        >Passport</label
+                      >
+                    </div>
+                    <div class="choice">
+                      <input type="checkbox" id="idCardCheckbox5" />
+                      <label for="idCardCheckbox5" class="desc white"
+                        >Residence permit</label
+                      >
+                    </div>
+                    <div class="choice">
+                      <input type="checkbox" id="idCardCheckbox6" />
+                      <label for="idCardCheckbox6" class="desc white"
+                        >Driver`slicense</label
+                      >
+                    </div>
+                  </div>
+                  <p class="desc white">The document should be:</p>
+                  <p class="desc white">- bright and clear,</p>
+                  <p class="desc white">
+                    - all corners of the document should be visible.
+                  </p>
+                  <div class="upload">
+                    <input type="file" id="fileInput" name="fileInput" />
+                    <label for="fileInput">
+                      <img
+                        class="upload-img"
+                        src="./assets/images/verification/upload.svg"
+                        alt="Загрузить файл"
+                      />
+                    </label>
+                  </div>
+                  <button
+                    type="button"
+                    class="btn-continue"
+                    onclick="hidePopup('sixthPopup'); showNextPopup('seventhPopup')"
+                  >
+                    Next
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div id="seventhPopup" class="popup prompt-container-verification">
+              <form>
+                <div class="prompt-content">
+                  <img
+                    src="./assets/images/battleroom-open/plus.svg"
+                    class="prompt-icon prompt-icon-plus-ver"
+                    alt=""
+                  />
+                  <img
+                    src="./assets/images/verification/verification.svg"
+                    class="prompt-icon"
+                    alt=""
+                  />
+                  <p class="prompt-title" style="padding: 0">Step 2</p>
+                  <p class="desc white" style="padding: 0; text-align: center">
+                    Email verification
+                  </p>
+                  <img
+                    src="./assets/images/verification/step-2.svg"
+                    class="prompt-icon"
+                    alt=""
+                  />
+                  <p class="desc white">Enter your email</p>
+                  <input
+                    type="email"
+                    name=""
+                    class="input-email"
+                    placeholder="Email*"
+                    id=""
+                  />
+                  <div class="verification-code-block">
+                    <input
+                      type="text"
+                      placeholder="_ _ _ _"
+                      class="enter-code"
+                      maxlength="4"
+                      pattern="[0-9]{4}"
+                    />
+                    <button type="submit" class="send-code">Send code</button>
+                  </div>
+                  <button
+                    type="button"
+                    class="btn-continue"
+                    onclick="hidePopup('seventhPopup'); showNextPopup('eighthPopup')"
+                  >
+                    Continue
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div id="eighthPopup" class="popup prompt-container-verification">
+              <div class="prompt-content">
+                <div class="confetti">
+                  <div class="successfully-verified">
+                    <img
+                      src="./assets/images/verification/verification.svg"
+                      class="prompt-icon"
+                      style="margin: 0 auto"
+                      alt=""
+                    />
+                    <p class="prompt-title" style="padding: 0">
+                      Successfully verified
+                    </p>
+                    <p
+                      class="desc white"
+                      style="padding: 0; text-align: center"
+                    >
+                      You are now verified!
+                    </p>
+                    <a
+                      href="./battleroom-live.html"
+                      class="btn-continue"
+                      onclick="hidePopup('eighthPopup')"
+                    >
+                      Ok
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="account-balance">
+              <a href="#" class="main-balance-btn" style="color: #fff">
+                <img src="./assets/images/battleroom-open/bank.svg" alt="" />
+                <p class="desc">Main <br />Balance</p>
+                <p class="desc green">₮ 1,000</p>
+              </a>
+              <hr class="table-hr" />
+              <div class="row2">
+                <a href="#" class="score-points-btn">
+                  <img src="./assets/images/icons/cup.svg" alt="" />
+                  <p class="desc">
+                    Score Points
+                    <br />
+                    <span class="green"> ✪ 234572</span>
+                  </p>
+                </a>
+                <hr class="hr-vertical" />
+                <a href="#" class="battlecoin-btn">
+                  <img src="./assets/images/icons/battlecoine.svg" alt="" />
+                  <p class="desc">
+                    Battle coin
+                    <br />
+                    <span class="green"> 100</span>
+                  </p>
+                </a>
+              </div>
+            </div>
+
+            <a href="./deposit.html" class="account-action-btn"
+              ><div class="text-img">
+                <img
+                  src="./assets/images/battleroom-open/deposit.svg"
+                  alt=""
+                />Deposit
+              </div></a
+            >
+            <a href="./withdrawal.html" class="account-action-btn"
+              ><div class="text-img">
+                <img
+                  src="./assets/images/battleroom-open/withdrawal.svg"
+                  alt=""
+                />Withdrawal
+              </div></a
+            >
+            <a href="./transactions.html" class="account-action-btn"
+              ><div class="text-img">
+                <img
+                  src="./assets/images/battleroom-open/transaction.svg"
+                  alt=""
+                />Tranactions
+              </div></a
+            >
+            <a
+              href="./personal-settings-notverified.html"
+              class="account-action-btn"
+              ><div class="text-img">
+                <img
+                  src="./assets/images/battleroom-open/settings.svg"
+                  alt=""
+                />Personal Settings
+              </div></a
+            >
+            <a href="./mybattles.html" class="account-action-btn"
+              ><div class="text-img">
+                <img src="./assets/images/battleroom-open/battle.svg" alt="" />
+                My Battles
+              </div></a
+            >
+            <a href="./leaderboard.html" class="account-action-btn"
+              ><div class="text-img">
+                <img src="./assets/images/battleroom-open/crown.svg" alt="" />
+                Leaderboard
+              </div></a
+            >
+            <a href="./followers.html" class="account-action-btn"
+              ><div class="text-img">
+                <img src="./assets/images/icons/people.svg" alt="" /> Followers
+              </div></a
+            >
+
+            <a href="./support.html" class="account-action-btn"
+              ><div class="text-img">
+                <img src="./assets/images/battleroom-open/support.svg" alt="" />
+                Support
+              </div></a
+            >
+          </div>
+        </div>
+      </header>
+      <div class="prompt-container">
+        <div class="prompt confirm">
+          <img
+            src="./assets/images/battleroom-open/plus.svg"
+            class="prompt-icon prompt-icon-plus"
+            alt=""
+          />
+          <img
+            src="./assets/images/battleroom-open/question.svg"
+            class="prompt-icon"
+            alt=""
+          />
+
+          <p class="prompt-title" style="padding: 0">Battle Rules</p>
+          <p class="prompt-desc">
+            Each player has to pick 1 or 3 stocks. The start and end of the
+            Battle depend on the opening hours of the stock exchange. Winner is
+            determined by best performing stock combination.
+          </p>
+        </div>
+      </div>
+      <main class="battleroom-background">
+        <div class="battleroom">
+          <div class="nav">
+            <div class="month-time-adaptive">
+              <img src="./assets/images/icons/clock.svg" alt="" />
+              <p id="currentMonth"></p>
+              <hr />
+              <p id="currentTime"></p>
+            </div>
+            <img
+              src="./assets/images/login/logo_2.svg"
+              class="battleroom-logo"
+              alt=""
+            />
+            <a href="./battleroom-live.html">
+              <img src="./assets/images/vip-room/battle-room-2.svg" alt="" />
+            </a>
+            <a href="./viproom-open.html">
+              <img src="./assets/images/vip-room/vip-room-icon.svg" alt="" />
+            </a>
+            <a href="./pokerroom-open.html">
+              <img
+                src="./assets/images/battleroom-open/poker-room.svg"
+                alt=""
+              />
+            </a>
+            <a href="./stockvsstock-open.html">
+              <img src="./assets/images/battleroom-open/stock.svg" alt="" />
+            </a>
+            <div class="month-time">
+              <img src="./assets/images/icons/clock.svg" alt="" />
+              <p id="currentMonth"></p>
+              <hr />
+              <p id="currentTime"></p>
+            </div>
+            <a href="./battleroom-live.html" class="nav-btn"
+              ><div class="text-img">
+                <img
+                  src="./assets/images/battleroom-open/sword.svg"
+                  alt=""
+                />BATTLE ROOM
+              </div></a
+            >
+            <a href="./viproom-open.html" class="nav-btn first"
+              ><div class="text-img">
+                <img
+                  src="./assets/images/battleroom-open/crown-icon.svg"
+                  alt=""
+                />VIP ROOM
+              </div></a
+            >
+            <a href="./pokerroom-open.html" class="nav-btn"
+              ><div class="text-img">
+                <img
+                  src="./assets/images/battleroom-open/poker.svg"
+                  alt=""
+                />POKER ROOM
+              </div></a
+            >
+            <a href="./stockvsstock-open.html" class="nav-btn"
+              ><div class="text-img">
+                <img
+                  src="./assets/images/battleroom-open/candles.svg"
+                  alt=""
+                />STOCK VS STOCK
+              </div></a
+            >
+          </div>
+
+          <div class="battleroom-filter-menu">
+            <div class="battleroom-filter">
+              <div class="select">
+                <a href="./viproom-all.html" class="filter-button">All</a>
+                <a href="./viproom-open.html" class="filter-button active"
+                  >Open</a
+                >
+                <a href="./viproom-live.html" class="filter-button">Live</a>
+                <a href="./viproom-finished.html" class="filter-button"
+                  >Finished</a
+                >
+                <img
+                  src="./assets/images/battleroom-open/question.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+
+            <div class="first-part">
+              <div class="battleroom-filter-adaptive">
+                <a href="./viproom-all.html" class="filter-button">All</a>
+                <a href="./viproom-open.html" class="filter-button active"
+                  >Open</a
+                >
+                <a href="./viproom-live.html" class="filter-button">Live</a>
+                <a href="./viproom-finished.html" class="filter-button"
+                  >Finished</a
+                >
+              </div>
+              <img src="./assets/images/battleroom-open/question.svg" alt="" />
+            </div>
+          </div>
+
+          <div class="info-battle rooms team-play">
+            <div class="first-block battle-info">
+              <a href="./viproom-open.html" class="btn-back">← Back</a>
+              <hr class="hr-btn-back" />
+
+              <div class="battle-time-price">
+                <div class="first-part">
+                  <div class="block-bet-price">
+                    <p class="desc start">Choose your Team Play:</p>
+
+                    <div class="flex-column">
+                      <div class="choice-round choice-team-play">
+                        <div class="custom-radio">
+                          <input type="radio" id="1vs1" name="vs" />
+                          <label for="1vs1"></label>
+                        </div>
+                        <label class="desc">Team Play 1vs1</label>
+                      </div>
+                      <div class="choice-round choice-team-play">
+                        <div class="custom-radio">
+                          <input type="radio" id="2vs2" name="vs" />
+                          <label for="2vs2"></label>
+                        </div>
+                        <label class="desc">Team Play 2vs2</label>
+                      </div>
+                      <div class="choice-round choice-team-play">
+                        <div class="custom-radio">
+                          <input type="radio" id="3vs3" name="vs" />
+                          <label for="3vs3"></label>
+                        </div>
+                        <label class="desc">Team Play 3vs3</label>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="desc start">Choose your Group:</p>
+                  <div class="pick-stocks btn-group">
+                    <label class="choice-stock" for="groupA">
+                      <input
+                        type="radio"
+                        id="groupA"
+                        name="chooseGroup"
+                        value="A"
+                      />
+                      <span class="desc">Group A</span>
+                    </label>
+                    <label class="choice-stock" for="groupB">
+                      <input
+                        type="radio"
+                        id="groupB"
+                        name="chooseGroup"
+                        value="B"
+                      />
+                      <span class="desc">Group B</span>
+                    </label>
+                  </div>
+
+                  <p class="desc start">Choose your Bet:</p>
+                  <div class="stockvsstock-button-item">
+                    <div class="left">
+                      <img
+                        src="./assets/images/stock-vs-stock/minus.svg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="center">
+                      <p class="desc">Your bet:</p>
+                      <p class="desc white" style="text-decoration: underline">
+                        $10
+                      </p>
+                    </div>
+                    <div class="right">
+                      <img
+                        src="./assets/images/stock-vs-stock/plus.svg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+
+                  <p class="desc start">How many Shares?:</p>
+                  <div class="pick-stocks">
+                    <label class="choice-stock" for="one">
+                      <input type="radio" id="one" name="pickStock" value="1" />
+                      <span class="desc">Pick 1 stock</span>
+                    </label>
+                    <label class="choice-stock" for="two">
+                      <input type="radio" id="two" name="pickStock" value="2" />
+                      <span class="desc">Pick 2 stock</span>
+                    </label>
+                    <label class="choice-stock" for="three">
+                      <input
+                        type="radio"
+                        id="three"
+                        name="pickStock"
+                        value="3"
+                      />
+                      <span class="desc">Pick 3 stock</span>
+                    </label>
+                  </div>
+                  <div class="battle-rulls">
+                    <div class="first-battle-rulls">
+                      <p class="battle-rulls-title">Battle Rules</p>
+                      <p class="battle-rulls-desc">
+                        Each player has to pick 3 stocks. The start and end of
+                        the Battle depend on the opening hours of the stock
+                        exchange. Winner is determined by best performing stock
+                        combination.
+                      </p>
+                    </div>
+                    <div class="second-battle-rulls">
+                      <p class="battle-rulls-title">Restrictions</p>
+                      <p class="battle-rulls-desc">
+                        You can only use a specific stock combination once. Each
+                        unique combination can only win one Battle per day.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="second-part">
+                  <div class="block-players groups">
+                    <div class="block-group-a">
+                      <p class="desc">Group A</p>
+                      <div class="id-player">
+                        <img
+                          src="./assets/images/battleroom-open/player-2.svg"
+                          alt=""
+                        />
+                        <p class="id-player-desc">Davis</p>
+                      </div>
+                      <div class="id-player">
+                        <img
+                          src="./assets/images/battleroom-open-viewplayers/player-silver.svg"
+                          alt=""
+                        />
+                        <p class="id-player-desc">Carl</p>
+                      </div>
+                    </div>
+                    <img
+                      src="./assets/images/icons/vs.png"
+                      class="icon-vs"
+                      alt=""
+                    />
+                    <div class="block-group-b">
+                      <p class="desc">Group B</p>
+                      <div class="id-player">
+                        <p class="desc violet">Invite a friend</p>
+                      </div>
+                      <div class="id-player">
+                        <p class="desc violet">Invite a friend</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flex-column choice-group">
+                    <p class="desc gold">
+                      Notify other players about created game
+                    </p>
+                    <div class="row2">
+                      <div class="block-group-a">
+                        <div class="custom-radio">
+                          <input
+                            type="radio"
+                            id="A"
+                            name="selectGroup"
+                            value="A"
+                          />
+                          <label for="A"></label>
+                        </div>
+                        <label class="desc">Group A</label>
+                      </div>
+                      <div class="block-group-b">
+                        <div class="custom-radio">
+                          <input
+                            type="radio"
+                            id="B"
+                            name="selectGroup"
+                            value="B"
+                          />
+                          <label for="B"></label>
+                        </div>
+                        <label class="desc">Group B</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="advice links">
+                    <p class="room-desc">
+                      Copy the link to invite friends to the game
+                    </p>
+
+                    <div class="row2">
+                      <p class="address" id="walletAddress">
+                        <span class="address-text">
+                          http://battlestock/jvrbvjjrvncjrejkgt...
+                        </span>
+                        <img
+                          src="./assets/images/copy.svg"
+                          alt=""
+                          id="copyButton"
+                        />
+                      </p>
+                      <p class="address" id="walletAddress">
+                        <span class="address-text">
+                          http://battlestock/jvrbvjjrvncjrejkgt...
+                        </span>
+                        <img
+                          src="./assets/images/copy.svg"
+                          alt=""
+                          id="copyButton"
+                        />
+                      </p>
+                    </div>
+                  </div>
+                  <div class="room-block-desc end">
+                    <p class="room-desc none">
+                      <span class="white">1/2</span>
+                      players joined
+                    </p>
+                  </div>
+                  <div class="social-media none" style="margin-left: 10px">
+                    <img
+                      src="./assets/images/soc-media/arrow-right.svg"
+                      alt=""
+                    />
+                    <a href="#"
+                      ><img src="./assets/images/soc-media/vk.svg" alt=""
+                    /></a>
+                    <a href="#"
+                      ><img src="./assets/images/soc-media/x.svg" alt=""
+                    /></a>
+                    <a href="#"
+                      ><img src="./assets/images/soc-media/facebook.svg" alt=""
+                    /></a>
+                    <a href="#"
+                      ><img src="./assets/images/soc-media/whatsapp.svg" alt=""
+                    /></a>
+                    <a href="#"
+                      ><img src="./assets/images/soc-media/telegram.svg" alt=""
+                    /></a>
+                    <a href="#"
+                      ><img src="./assets/images/soc-media/viber.svg" alt=""
+                    /></a>
+                    <a href="#"
+                      ><img src="./assets/images/soc-media/signal.svg" alt=""
+                    /></a>
+                    <a href="#" class="share"
+                      ><p class="desc">Share</p>
+                      <img src="./assets/images/soc-media/share.svg" alt=""
+                    /></a>
+                  </div>
+                  <div
+                    class="number-players-adaptive"
+                    style="justify-content: space-between; flex-direction: row"
+                  >
+                    <div class="number-players">
+                      <p class="room-desc" style="align-self: self-end">
+                        <span class="white">1/2</span>
+                        players joined
+                      </p>
+                    </div>
+                    <div class="social-media-adaptive">
+                      <img
+                        src="./assets/images/soc-media/arrow-left.svg"
+                        alt=""
+                        class="toggle-icons"
+                      />
+                      <div class="icons-container">
+                        <a href="#"
+                          ><img src="./assets/images/soc-media/vk.svg" alt=""
+                        /></a>
+                        <a href="#"
+                          ><img src="./assets/images/soc-media/x.svg" alt=""
+                        /></a>
+                        <a href="#"
+                          ><img
+                            src="./assets/images/soc-media/facebook.svg"
+                            alt=""
+                        /></a>
+                        <a href="#"
+                          ><img
+                            src="./assets/images/soc-media/whatsapp.svg"
+                            alt=""
+                        /></a>
+                        <a href="#"
+                          ><img
+                            src="./assets/images/soc-media/telegram.svg"
+                            alt=""
+                        /></a>
+                        <a href="#"
+                          ><img
+                            src="./assets/images/soc-media/viber.svg"
+                            alt=""
+                        /></a>
+                        <a href="#"
+                          ><img
+                            src="./assets/images/soc-media/signal.svg"
+                            alt=""
+                        /></a>
+                      </div>
+                      <a href="#" class="share"
+                        ><p class="desc">Share</p>
+                        <img src="./assets/images/soc-media/share.svg" alt=""
+                      /></a>
+                    </div>
+                  </div>
+                  <div
+                    class="block-score-points margin-top"
+                    style="padding-left: 10px"
+                  >
+                    <p class="battle-rulls-title" style="padding-top: 0px">
+                      Score Points
+                    </p>
+                    <table border="1" class="score-table">
+                      <tbody>
+                        <tr class="table-first-line">
+                          <td>
+                            <img
+                              src="./assets/images/battleroom-open-viewplayers/star-1.svg"
+                              alt=""
+                              class="condition-img"
+                            />
+                            <p class="condition-title">
+                              <span style="color: #ffd600">Marshal</span>
+                            </p>
+                            <p class="condition-title">1000p</p>
+                          </td>
+                          <td>
+                            <img
+                              src="./assets/images/battleroom-open-viewplayers/star-2.svg"
+                              alt=""
+                              class="condition-img"
+                            />
+                            <p class="condition-title">
+                              <span style="color: #bf9058">General</span>
+                            </p>
+                            <p class="condition-title">500p</p>
+                          </td>
+                          <td>
+                            <img
+                              src="./assets/images/battleroom-open-viewplayers/star-3.svg"
+                              alt=""
+                              class="condition-img"
+                            />
+                            <p class="condition-title">
+                              <span style="color: #c4c4c4">Major</span>
+                            </p>
+                            <p class="condition-title">250p</p>
+                          </td>
+                          <td>
+                            <img
+                              src="./assets/images/battleroom-open-viewplayers/star-4.svg"
+                              alt=""
+                              class="condition-img"
+                            />
+                            <p class="condition-title">
+                              <span style="color: #9e69f5">Sergeant</span>
+                            </p>
+                            <p class="condition-title">100p</p>
+                          </td>
+                          <td>
+                            <img
+                              src="./assets/images/battleroom-open-viewplayers/star-5.svg"
+                              alt=""
+                              class="condition-img"
+                            />
+                            <p class="condition-title">
+                              <span style="color: #4fbc85">Corporal</span>
+                            </p>
+                            <p class="condition-title">50p</p>
+                          </td>
+                        </tr>
+                        <tr class="table-second-line three-blocks">
+                          <td>
+                            <p class="prompt-desc">1vs1 winner</p>
+                            <p class="prompt-desc white">
+                              6 points each winner
+                            </p>
+                          </td>
+                          <td>
+                            <p class="prompt-desc">2vs2 winners</p>
+                            <p class="prompt-desc white">
+                              8 points each winner
+                            </p>
+                          </td>
+                          <td>
+                            <p class="prompt-desc">3vs3 winners</p>
+                            <p class="prompt-desc white">
+                              10 points each winner
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="second-block join-battle">
+              <div class="join-battle-top">
+                <a href="#" class="btn-open">Open</a>
+                <p class="stock-item-time">
+                  Starts in
+                  <span style="color: #fff" class="time">6ч 29м 18с </span>
+                </p>
+              </div>
+
+              <p class="battle-rulls-title">Join Battle</p>
+              <p class="battle-rulls-desc">
+                Select stocks and enter the Battle
+              </p>
+
+              <div id="form">
+                <button class="search-btn">
+                  <svg class="search-svg" viewBox="0 0 1024 1024">
+                    <path
+                      class="path1"
+                      d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"
+                    ></path>
+                  </svg>
+                </button>
+
+                <hr />
+                <input
+                  type="search"
+                  id="query"
+                  placeholder="Search..."
+                  aria-label="Search through site content"
+                />
+              </div>
+              <div
+                class="join-battle-input"
+                style="justify-content: space-between"
+              >
+                <div class="name-stock">
+                  <div class="abbreviation">
+                    <p class="desc">MSFT</p>
+                  </div>
+                  <p class="desc white">- Microsoft Corp.</p>
+                </div>
+                <img src="./assets/images/icons/close.svg" alt="" />
+              </div>
+              <div
+                class="join-battle-input"
+                style="justify-content: space-between"
+              >
+                <div class="name-stock">
+                  <div class="abbreviation">
+                    <p class="desc">MSFT</p>
+                  </div>
+                  <p class="desc white">- Microsoft Corp.</p>
+                </div>
+                <img src="./assets/images/icons/close.svg" alt="" />
+              </div>
+
+              <p class="battle-rulls-desc">
+                2 <span class="gold"> of </span> 2
+                <span class="gold">selected</span>
+              </p>
+              <div class="margin-top">
+                <p class="battle-rulls-title">Treding Stocks</p>
+                <p class="battle-rulls-desc">
+                  Not sure what to pick? These are the most popular selections
+                  in the past 24 hours. Please send us your stock via WhatsApp
+                  if it is not on the list.
+                </p>
+              </div>
+              <div class="vertical-menu-treding-background">
+                <div class="vertical-menu-treding">
+                  <div class="vertical-menu-item">
+                    <div class="vertical-menu-item-left">
+                      <div class="abbreviation">
+                        <p class="desc">MSFT</p>
+                      </div>
+                    </div>
+                    <div class="vertical-menu-item-right">
+                      <p class="desc white">- Microsoft Corp.</p>
+                    </div>
+                  </div>
+                  <div class="vertical-menu-item">
+                    <div class="vertical-menu-item-left">
+                      <div class="abbreviation">
+                        <p class="desc">MSFT</p>
+                      </div>
+                    </div>
+                    <div class="vertical-menu-item-right">
+                      <p class="desc white">- Microsoft Corp.</p>
+                    </div>
+                  </div>
+                  <div class="vertical-menu-item">
+                    <div class="vertical-menu-item-left">
+                      <div class="abbreviation">
+                        <p class="desc">MSFT</p>
+                      </div>
+                    </div>
+                    <div class="vertical-menu-item-right">
+                      <p class="desc white">- Microsoft Corp.</p>
+                    </div>
+                  </div>
+                  <div class="vertical-menu-item">
+                    <div class="vertical-menu-item-left">
+                      <div class="abbreviation">
+                        <p class="desc">MSFT</p>
+                      </div>
+                    </div>
+                    <div class="vertical-menu-item-right">
+                      <p class="desc white">- Microsoft Corp.</p>
+                    </div>
+                  </div>
+                  <div class="vertical-menu-item">
+                    <div class="vertical-menu-item-left">
+                      <div class="abbreviation">
+                        <p class="desc">MSFT</p>
+                      </div>
+                    </div>
+                    <div class="vertical-menu-item-right">
+                      <p class="desc white">- Microsoft Corp.</p>
+                    </div>
+                  </div>
+                  <div class="vertical-menu-item">
+                    <div class="vertical-menu-item-left">
+                      <div class="abbreviation">
+                        <p class="desc">MSFT</p>
+                      </div>
+                    </div>
+                    <div class="vertical-menu-item-right">
+                      <p class="desc white">- Microsoft Corp.</p>
+                    </div>
+                  </div>
+                  <div class="vertical-menu-item">
+                    <div class="vertical-menu-item-left">
+                      <div class="abbreviation">
+                        <p class="desc">MSFT</p>
+                      </div>
+                    </div>
+                    <div class="vertical-menu-item-right">
+                      <p class="desc white">- Microsoft Corp.</p>
+                    </div>
+                  </div>
+                  <div class="vertical-menu-item">
+                    <div class="vertical-menu-item-left">
+                      <div class="abbreviation">
+                        <p class="desc">MSFT</p>
+                      </div>
+                    </div>
+                    <div class="vertical-menu-item-right">
+                      <p class="desc white">- Microsoft Corp.</p>
+                    </div>
+                  </div>
+                  <div class="vertical-menu-item">
+                    <div class="vertical-menu-item-left">
+                      <div class="abbreviation">
+                        <p class="desc">MSFT</p>
+                      </div>
+                    </div>
+                    <div class="vertical-menu-item-right">
+                      <p class="desc white">- Microsoft Corp.</p>
+                    </div>
+                  </div>
+                  <div class="vertical-menu-item">
+                    <div class="vertical-menu-item-left">
+                      <div class="abbreviation">
+                        <p class="desc">MSFT</p>
+                      </div>
+                    </div>
+                    <div class="vertical-menu-item-right">
+                      <p class="desc white">- Microsoft Corp.</p>
+                    </div>
+                  </div>
+                  <div class="vertical-menu-item">
+                    <div class="vertical-menu-item-left">
+                      <div class="abbreviation">
+                        <p class="desc">MSFT</p>
+                      </div>
+                    </div>
+                    <div class="vertical-menu-item-right">
+                      <p class="desc white">- Microsoft Corp.</p>
+                    </div>
+                  </div>
+                  <div class="vertical-menu-item">
+                    <div class="vertical-menu-item-left">
+                      <div class="abbreviation">
+                        <p class="desc">MSFT</p>
+                      </div>
+                    </div>
+                    <div class="vertical-menu-item-right">
+                      <p class="desc white">- Microsoft Corp.</p>
+                    </div>
+                  </div>
+                  <div class="vertical-menu-item">
+                    <div class="vertical-menu-item-left">
+                      <div class="abbreviation">
+                        <p class="desc">MSFT</p>
+                      </div>
+                    </div>
+                    <div class="vertical-menu-item-right">
+                      <p class="desc white">- Microsoft Corp.</p>
+                    </div>
+                  </div>
+                  <div class="vertical-menu-item">
+                    <div class="vertical-menu-item-left">
+                      <div class="abbreviation">
+                        <p class="desc">MSFT</p>
+                      </div>
+                    </div>
+                    <div class="vertical-menu-item-right">
+                      <p class="desc white">- Microsoft Corp.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a href="#" class="btn-enter">Enter</a>
+            </div>
+          </div>
+        </div>
+        <div class="prompt-container">
+          <div class="prompt confirm">
+            <img
+              src="./assets/images/battleroom-open/plus.svg"
+              class="prompt-icon prompt-icon-plus"
+              alt=""
+            />
+            <img
+              src="./assets/images/vip-room/crown.svg"
+              class="prompt-icon"
+              alt=""
+            />
+
+            <p class="prompt-title">You have successfully joined the Battle!</p>
+            <div class="flex-column" style="align-items: center">
+              <p class="desc">
+                Share <img src="./assets/images/soc-media/share.svg" alt="" />
+              </p>
+              <div class="social-media-row">
+                <a href="#"
+                  ><img src="./assets/images/soc-media/vk.svg" alt=""
+                /></a>
+                <a href="#"
+                  ><img src="./assets/images/soc-media/x.svg" alt=""
+                /></a>
+                <a href="#"
+                  ><img src="./assets/images/soc-media/facebook.svg" alt=""
+                /></a>
+                <a href="#"
+                  ><img src="./assets/images/soc-media/whatsapp.svg" alt=""
+                /></a>
+                <a href="#"
+                  ><img src="./assets/images/soc-media/telegram.svg" alt=""
+                /></a>
+                <a href="#"
+                  ><img src="./assets/images/soc-media/viber.svg" alt=""
+                /></a>
+                <a href="#"
+                  ><img src="./assets/images/soc-media/signal.svg" alt=""
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="prompt-container bg-main-balance">
+          <div class="prompt main-balance">
+            <img
+              src="./assets/images/battleroom-open/plus.svg"
+              class="close-icon prompt-icon"
+              alt=""
+            />
+            <img
+              src="./assets/images/icons/bank.svg"
+              class="prompt-icon"
+              alt=""
+            />
+
+            <div class="main-balance-info">
+              <p class="prompt-desc">Main Balance</p>
+              <p class="prompt-title" style="padding: 0">$1000</p>
+            </div>
+            <div class="block-profit-table">
+              <p class="prompt-title" style="padding-top: 0px">Profit Table</p>
+              <div class="block-conditions">
+                <div class="condition-item">
+                  <p class="condition-title" style="color: #ffd762">
+                    Player/ <br />Position
+                  </p>
+                  <p class="condition-title">1.</p>
+                  <p class="condition-title">2.</p>
+                  <p class="condition-title">3.</p>
+                  <p class="condition-title">4.</p>
+                  <p class="condition-title">5.</p>
+                  <p class="condition-title">6.</p>
+                  <p class="condition-title">7.</p>
+                </div>
+                <hr class="prompt-profit-hr-height" />
+                <div class="condition-item">
+                  <p class="condition-title">
+                    <span style="color: #ffd762">1-7</span>
+                  </p>
+                  <p class="condition-title">100%</p>
+                  <p class="condition-title">-</p>
+                  <p class="condition-title">-</p>
+                  <p class="condition-title">-</p>
+                  <p class="condition-title">-</p>
+                  <p class="condition-title">-</p>
+                  <p class="condition-title">-</p>
+                </div>
+                <hr class="prompt-profit-hr-height" />
+                <div class="condition-item">
+                  <p class="condition-title">
+                    <span style="color: #ffd762">8</span>
+                  </p>
+                  <p class="condition-title">60,0%</p>
+                  <p class="condition-title">40,0%</p>
+                  <p class="condition-title">-</p>
+                  <p class="condition-title">-</p>
+                  <p class="condition-title">-</p>
+                  <p class="condition-title">-</p>
+                  <p class="condition-title">-</p>
+                </div>
+                <hr class="prompt-profit-hr-height" />
+                <div class="condition-item">
+                  <p class="condition-title green">
+                    <span>9-11</span>
+                  </p>
+                  <p class="condition-title green">50,0%</p>
+                  <p class="condition-title green">30,0%</p>
+                  <p class="condition-title green">20,0</p>
+                  <p class="condition-title green">-</p>
+                  <p class="condition-title green">-</p>
+                  <p class="condition-title green">-</p>
+                  <p class="condition-title green">-</p>
+                </div>
+                <hr class="prompt-profit-hr-height" />
+                <div class="condition-item">
+                  <p class="condition-title">
+                    <span style="color: #ffd762">12-20</span>
+                  </p>
+                  <p class="condition-title">40,0%</p>
+                  <p class="condition-title">27,0%</p>
+                  <p class="condition-title">19,0%</p>
+                  <p class="condition-title">14,0%</p>
+                  <p class="condition-title">-</p>
+                  <p class="condition-title">-</p>
+                  <p class="condition-title">-</p>
+                </div>
+                <hr class="prompt-profit-hr-height" />
+                <div class="condition-item">
+                  <p class="condition-title">
+                    <span style="color: #ffd762">21-30</span>
+                  </p>
+                  <p class="condition-title">36,0%</p>
+                  <p class="condition-title">25,0%</p>
+                  <p class="condition-title">17,5%</p>
+                  <p class="condition-title">12,8%</p>
+                  <p class="condition-title">8,7%</p>
+                  <p class="condition-title">-</p>
+                  <p class="condition-title">-</p>
+                </div>
+                <hr class="prompt-profit-hr-height" />
+                <div class="condition-item">
+                  <p class="condition-title">
+                    <span style="color: #ffd762">31-50</span>
+                  </p>
+                  <p class="condition-title">34,0%</p>
+                  <p class="condition-title">23,0%</p>
+                  <p class="condition-title">16,5%</p>
+                  <p class="condition-title">11,9%</p>
+                  <p class="condition-title">8,0%</p>
+                  <p class="condition-title">6,6%</p>
+                  <p class="condition-title">-</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="prompt-container bg-score-points">
+          <div class="prompt score-points">
+            <img
+              src="./assets/images/battleroom-open/plus.svg"
+              class="close-icon prompt-icon"
+              alt=""
+            />
+            <img
+              src="./assets/images/icons/cup-1.svg"
+              class="prompt-icon"
+              alt=""
+            />
+
+            <div class="main-balance-info">
+              <p class="prompt-desc">Score Points</p>
+              <p class="prompt-title" style="padding: 0">✪ 234572</p>
+            </div>
+            <div class="block-score-points">
+              <img src="./assets/images/rooms/sword.svg" class="icon" alt="" />
+              <p class="prompt-title" style="padding-top: 0px">
+                <span style="color: #ffd762">Battle room</span> Score Points
+              </p>
+
+              <table border="1" class="score-table">
+                <tbody>
+                  <tr class="table-first-line">
+                    <td>
+                      <img
+                        src="./assets/images/battleroom-open-viewplayers/star-1.svg"
+                        alt=""
+                        class="condition-img"
+                      />
+                      <p class="condition-title">
+                        <span style="color: #ffd600">Marshal</span>
+                      </p>
+                      <p class="condition-title">1000p</p>
+                    </td>
+                    <td>
+                      <img
+                        src="./assets/images/battleroom-open-viewplayers/star-2.svg"
+                        alt=""
+                        class="condition-img"
+                      />
+                      <p class="condition-title">
+                        <span style="color: #bf9058">General</span>
+                      </p>
+                      <p class="condition-title">500p</p>
+                    </td>
+                    <td>
+                      <img
+                        src="./assets/images/battleroom-open-viewplayers/star-3.svg"
+                        alt=""
+                        class="condition-img"
+                      />
+                      <p class="condition-title">
+                        <span style="color: #c4c4c4">Major</span>
+                      </p>
+                      <p class="condition-title">250p</p>
+                    </td>
+                    <td>
+                      <img
+                        src="./assets/images/battleroom-open-viewplayers/star-4.svg"
+                        alt=""
+                        class="condition-img"
+                      />
+                      <p class="condition-title">
+                        <span style="color: #9e69f5">Sergeant</span>
+                      </p>
+                      <p class="condition-title">100p</p>
+                    </td>
+                    <td>
+                      <img
+                        src="./assets/images/battleroom-open-viewplayers/star-5.svg"
+                        alt=""
+                        class="condition-img"
+                      />
+                      <p class="condition-title">
+                        <span style="color: #4fbc85">Corporal</span>
+                      </p>
+                      <p class="condition-title">50p</p>
+                    </td>
+                  </tr>
+                  <tr class="table-second-line">
+                    <td>
+                      <p class="prompt-desc">1st</p>
+                      <p class="prompt-desc white">12p</p>
+                    </td>
+                    <td>
+                      <p class="prompt-desc">2nd</p>
+                      <p class="prompt-desc white">10p</p>
+                    </td>
+                    <td>
+                      <p class="prompt-desc">3rd</p>
+                      <p class="prompt-desc white">8p</p>
+                    </td>
+                    <td>
+                      <p class="prompt-desc">4th</p>
+                      <p class="prompt-desc white">7p</p>
+                    </td>
+                    <td>
+                      <p class="prompt-desc">5th</p>
+                      <p class="prompt-desc white">6p</p>
+                    </td>
+                  </tr>
+                  <tr class="table-third-line">
+                    <td>
+                      <p class="prompt-desc">6th</p>
+                      <p class="prompt-desc white">5p</p>
+                    </td>
+                    <td>
+                      <p class="prompt-desc">7th</p>
+                      <p class="prompt-desc white">4p</p>
+                    </td>
+                    <td>
+                      <p class="prompt-desc">8th</p>
+                      <p class="prompt-desc white">3p</p>
+                    </td>
+                    <td>
+                      <p class="prompt-desc">9th</p>
+                      <p class="prompt-desc white">2p</p>
+                    </td>
+                    <td>
+                      <p class="prompt-desc">10th</p>
+                      <p class="prompt-desc white">1p</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <img
+                src="./assets/images/vip-room/crown.svg"
+                class="icon"
+                alt=""
+              />
+              <p class="prompt-title" style="padding-top: 0px">
+                <span style="color: #ffd762">Vip room</span> Score Points
+              </p>
+              <table border="1" class="score-table">
+                <tbody>
+                  <tr class="table-first-line">
+                    <td>
+                      <img
+                        src="./assets/images/battleroom-open-viewplayers/star-1.svg"
+                        alt=""
+                        class="condition-img"
+                      />
+                      <p class="condition-title">
+                        <span style="color: #ffd600">Marshal</span>
+                      </p>
+                      <p class="condition-title">1000p</p>
+                    </td>
+                    <td>
+                      <img
+                        src="./assets/images/battleroom-open-viewplayers/star-2.svg"
+                        alt=""
+                        class="condition-img"
+                      />
+                      <p class="condition-title">
+                        <span style="color: #bf9058">General</span>
+                      </p>
+                      <p class="condition-title">500p</p>
+                    </td>
+                    <td>
+                      <img
+                        src="./assets/images/battleroom-open-viewplayers/star-3.svg"
+                        alt=""
+                        class="condition-img"
+                      />
+                      <p class="condition-title">
+                        <span style="color: #c4c4c4">Major</span>
+                      </p>
+                      <p class="condition-title">250p</p>
+                    </td>
+                    <td>
+                      <img
+                        src="./assets/images/battleroom-open-viewplayers/star-4.svg"
+                        alt=""
+                        class="condition-img"
+                      />
+                      <p class="condition-title">
+                        <span style="color: #9e69f5">Sergeant</span>
+                      </p>
+                      <p class="condition-title">100p</p>
+                    </td>
+                    <td>
+                      <img
+                        src="./assets/images/battleroom-open-viewplayers/star-5.svg"
+                        alt=""
+                        class="condition-img"
+                      />
+                      <p class="condition-title">
+                        <span style="color: #4fbc85">Corporal</span>
+                      </p>
+                      <p class="condition-title">50p</p>
+                    </td>
+                  </tr>
+                  <tr class="table-second-line three-blocks">
+                    <td>
+                      <p class="prompt-desc">1vs1 winner</p>
+                      <p class="prompt-desc white">6 points each winner</p>
+                    </td>
+                    <td>
+                      <p class="prompt-desc">2vs2 winners</p>
+                      <p class="prompt-desc white">8 points each winner</p>
+                    </td>
+                    <td>
+                      <p class="prompt-desc">3vs3 winners</p>
+                      <p class="prompt-desc white">10 points each winner</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <img
+                src="./assets/images/poker-room/rhombus.svg"
+                class="icon"
+                alt=""
+              />
+              <p class="prompt-title" style="padding-top: 0px">
+                <span style="color: #ffd762">Poker room</span> Score Points
+              </p>
+              <table border="1" class="score-table">
+                <tbody>
+                  <tr class="table-first-line">
+                    <td>
+                      <img
+                        src="./assets/images/battleroom-open-viewplayers/star-1.svg"
+                        alt=""
+                        class="condition-img"
+                      />
+                      <p class="condition-title">
+                        <span style="color: #ffd600">Marshal</span>
+                      </p>
+                      <p class="condition-title">1000p</p>
+                    </td>
+                    <td>
+                      <img
+                        src="./assets/images/battleroom-open-viewplayers/star-2.svg"
+                        alt=""
+                        class="condition-img"
+                      />
+                      <p class="condition-title">
+                        <span style="color: #bf9058">General</span>
+                      </p>
+                      <p class="condition-title">500p</p>
+                    </td>
+                    <td>
+                      <img
+                        src="./assets/images/battleroom-open-viewplayers/star-3.svg"
+                        alt=""
+                        class="condition-img"
+                      />
+                      <p class="condition-title">
+                        <span style="color: #c4c4c4">Major</span>
+                      </p>
+                      <p class="condition-title">250p</p>
+                    </td>
+                    <td>
+                      <img
+                        src="./assets/images/battleroom-open-viewplayers/star-4.svg"
+                        alt=""
+                        class="condition-img"
+                      />
+                      <p class="condition-title">
+                        <span style="color: #9e69f5">Sergeant</span>
+                      </p>
+                      <p class="condition-title">100p</p>
+                    </td>
+                    <td>
+                      <img
+                        src="./assets/images/battleroom-open-viewplayers/star-5.svg"
+                        alt=""
+                        class="condition-img"
+                      />
+                      <p class="condition-title">
+                        <span style="color: #4fbc85">Corporal</span>
+                      </p>
+                      <p class="condition-title">50p</p>
+                    </td>
+                  </tr>
+                  <tr class="table-second-line three-blocks">
+                    <td>
+                      <p class="prompt-desc">2 players</p>
+                    </td>
+                    <td>
+                      <p class="prompt-desc">3 players</p>
+                    </td>
+                    <td>
+                      <p class="prompt-desc">4 players</p>
+                    </td>
+                  </tr>
+                  <tr class="table-second-line three-blocks">
+                    <td>
+                      <p class="prompt-desc">1st 2nd</p>
+                      <p class="prompt-desc white">10p 1p</p>
+                    </td>
+                    <td>
+                      <p class="prompt-desc">1st 2st 3rd</p>
+                      <p class="prompt-desc white">11p 5p 1p</p>
+                    </td>
+                    <td>
+                      <p class="prompt-desc">1st 2st 3rd 4th</p>
+                      <p class="prompt-desc white">12p 6p 3p 1p</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <img
+                src="./assets/images/stock-vs-stock/candles.svg"
+                class="icon"
+                alt=""
+              />
+              <p class="prompt-title" style="padding-top: 0px">
+                <span style="color: #ffd762">Stock vs Stock</span> Score Points
+              </p>
+              <table border="1" class="score-table">
+                <tbody>
+                  <tr class="table-first-line">
+                    <td>
+                      <img
+                        src="./assets/images/battleroom-open-viewplayers/star-1.svg"
+                        alt=""
+                        class="condition-img"
+                      />
+                      <p class="condition-title">
+                        <span style="color: #ffd600">Marshal</span>
+                      </p>
+                      <p class="condition-title">1000p</p>
+                    </td>
+                    <td>
+                      <img
+                        src="./assets/images/battleroom-open-viewplayers/star-2.svg"
+                        alt=""
+                        class="condition-img"
+                      />
+                      <p class="condition-title">
+                        <span style="color: #bf9058">General</span>
+                      </p>
+                      <p class="condition-title">500p</p>
+                    </td>
+                    <td>
+                      <img
+                        src="./assets/images/battleroom-open-viewplayers/star-3.svg"
+                        alt=""
+                        class="condition-img"
+                      />
+                      <p class="condition-title">
+                        <span style="color: #c4c4c4">Major</span>
+                      </p>
+                      <p class="condition-title">250p</p>
+                    </td>
+                    <td>
+                      <img
+                        src="./assets/images/battleroom-open-viewplayers/star-4.svg"
+                        alt=""
+                        class="condition-img"
+                      />
+                      <p class="condition-title">
+                        <span style="color: #9e69f5">Sergeant</span>
+                      </p>
+                      <p class="condition-title">100p</p>
+                    </td>
+                    <td>
+                      <img
+                        src="./assets/images/battleroom-open-viewplayers/star-5.svg"
+                        alt=""
+                        class="condition-img"
+                      />
+                      <p class="condition-title">
+                        <span style="color: #4fbc85">Corporal</span>
+                      </p>
+                      <p class="condition-title">50p</p>
+                    </td>
+                  </tr>
+                  <tr class="table-second-line one-block">
+                    <td>
+                      <p class="prompt-desc">Each player receives:</p>
+                      <p class="prompt-desc white">5p</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <footer class="login-footer relative">
+          <p class="footer-title">Regulations & Partners</p>
+          <img
+            src="./assets/images/login/partners.svg"
+            style="inline-size: fit-content"
+            alt=""
+          />
+          <p class="footer-copyright">
+            © 2024 StockBattle. All rights reserved.
+          </p>
+        </footer>
+      </main>
+    </div>
+  </body>
+  <script src="./assets/script.js"></script>
+</html>
