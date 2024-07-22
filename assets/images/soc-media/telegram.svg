@@ -1,0 +1,15 @@
+<svg width="25.000000" height="25.000000" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip14_507">
+			<rect id="telegram-plane-svgrepo-com 1" width="14.000000" height="14.000000" transform="translate(5.000000 6.000000)" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<circle id="Ellipse 1" cx="12.500000" cy="12.500000" r="12.500000" fill="#2DA5E1" fill-opacity="1.000000"/>
+	<rect id="telegram-plane-svgrepo-com 1" width="14.000000" height="14.000000" transform="translate(5.000000 6.000000)" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip14_507)">
+		<path id="Vector" d="M18.08 8.69L16.24 17.41C16.1 18.02 15.73 18.18 15.22 17.89L12.4 15.81L11.04 17.12C10.89 17.27 10.76 17.4 10.47 17.4L10.68 14.53L15.9 9.81C16.12 9.61 15.85 9.5 15.54 9.7L9.09 13.76L6.31 12.89C5.71 12.7 5.7 12.29 6.44 12L17.31 7.81C17.81 7.62 18.25 7.92 18.08 8.69Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+	</g>
+</svg>
