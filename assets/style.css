@@ -651,9 +651,6 @@
     margin: 10px auto !important;
     max-width: 1120px;
   }
-  .game {
-    height: auto !important;
-  }
 }
 
 @media (min-width: 1540px) and (max-width: 1919px) {
@@ -7458,7 +7455,6 @@ th {
 
   .poker-room-card {
     height: auto;
- 
   }
 
   .block-treding {
