@@ -7551,6 +7551,9 @@ th {
 .open.clicked {
   background-color: #ce1d2f;
 }
+.hold.clicked {
+  background-color: #ce1d2f;
+}
 .third-round .open {
   margin-top: 0;
 }
@@ -7798,6 +7801,10 @@ th {
   align-self: center;
 }
 
+.player.row2 {
+  display: flex;
+  flex-direction: row !important;
+}
 .player-firs-sec-round {
   display: flex;
   flex-direction: column;
@@ -7807,6 +7814,11 @@ th {
   width: 100%;
   height: 100%;
   justify-content: center;
+}
+
+.player-firs-sec-round.row2 {
+  display: flex;
+  flex-direction: row !important;
 }
 .second-round .player-firs-sec-round {
   height: auto;
@@ -7888,6 +7900,11 @@ th {
   flex-direction: column;
   gap: 10px;
   align-self: center;
+}
+
+.hidden-cards.row2 {
+  display: flex;
+  flex-direction: row !important;
 }
 
 .first-player {

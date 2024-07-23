@@ -1103,6 +1103,11 @@ document.querySelectorAll(".open").forEach(function (button) {
     button.classList.add("clicked");
   });
 });
+document.querySelectorAll(".hold").forEach(function (button) {
+  button.addEventListener("click", function () {
+    button.classList.add("clicked");
+  });
+});
 
 ///////////////////
 
