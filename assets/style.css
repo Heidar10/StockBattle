@@ -1132,6 +1132,46 @@
   text-decoration: none;
   overflow: hidden;
   position: relative;
+  opacity: 0;
+
+  animation: appear 0.5s forwards;
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+  }
+}
+.account-action-btn:nth-of-type(1) {
+  animation-delay: 0.1s;
+}
+
+.account-action-btn:nth-of-type(2) {
+  animation-delay: 0.2s;
+}
+
+.account-action-btn:nth-of-type(3) {
+  animation-delay: 0.3s;
+}
+
+.account-action-btn:nth-of-type(4) {
+  animation-delay: 0.4s;
+}
+
+.account-action-btn:nth-of-type(5) {
+  animation-delay: 0.5s;
+}
+
+.account-action-btn:nth-of-type(6) {
+  animation-delay: 0.6s;
+}
+
+.account-action-btn:nth-of-type(7) {
+  animation-delay: 0.7s;
+}
+
+.account-action-btn:nth-of-type(8) {
+  animation-delay: 0.8s;
 }
 
 @keyframes shimmer {
@@ -10979,9 +11019,6 @@ th {
   background-color: #6a3f3a;
 }
 
-.main-page .battleroom-logo-adap {
-  display: none;
-}
 .battleroom-background.stockvsstock-open-enter {
   height: auto !important;
 }
@@ -11025,11 +11062,8 @@ th {
   }
 }
 @media (min-width: 769px) and (max-width: 992px) {
-  .main-page .battleroom-logo-adap {
-    display: block;
-  }
   .main-page .battleroom-logo {
-    display: none;
+    max-width: none;
   }
   .card-content:hover .card-img-hover {
     display: block;
@@ -11054,6 +11088,7 @@ th {
   }
   .main-page .battleroom-logo {
     padding-left: 0;
+    max-width: none;
   }
   .account-balance {
     width: 300px;
@@ -11082,12 +11117,6 @@ th {
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
-  .main-page .battleroom-logo-adap {
-    display: block;
-  }
-  .main-page .battleroom-logo {
-    display: none;
-  }
   .block-cards {
     padding-left: 0;
     padding-right: 0;
@@ -11116,6 +11145,7 @@ th {
   }
   .main-page .battleroom-logo {
     padding-left: 0;
+    max-width: none;
   }
   .card-btn {
     width: 85%;
@@ -11162,11 +11192,8 @@ th {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  .main-page .battleroom-logo-adap {
-    display: block;
-  }
   .main-page .battleroom-logo {
-    display: none;
+    max-width: none;
   }
   .card-content:hover .card-img-hover {
     display: none;
