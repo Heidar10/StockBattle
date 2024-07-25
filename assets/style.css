@@ -543,9 +543,7 @@
   .stockvsstock .login-footer {
     position: relative !important;
   }
-  .stockvsstock .stock-room-item {
-    height: 296px;
-  }
+
   .stockvsstock-all .stock-room-item {
     height: auto;
   }
