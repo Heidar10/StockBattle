@@ -1071,6 +1071,14 @@ document.querySelectorAll(".score-points-btn").forEach(function (button) {
     });
   });
 });
+document.querySelectorAll(".aside-btn").forEach(function (button) {
+  button.addEventListener("click", function (event) {
+    event.preventDefault();
+    document.querySelectorAll(".bg-status").forEach(function (element) {
+      element.style.display = "flex";
+    });
+  });
+});
 
 document.querySelectorAll(".prompt-container").forEach(function (container) {
   container.addEventListener("click", function (event) {

@@ -7078,6 +7078,19 @@ th {
   margin: 0 auto;
 }
 
+.block-vs {
+  width: 40px;
+}
+
+.icon-vs-gif {
+  position: absolute;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 27%;
+  background-repeat: no-repeat;
+  left: 36%;
+}
+
 .lines.first-line .invite {
   padding: 5px 10px 0px 0px !important;
 }
@@ -7096,9 +7109,17 @@ th {
 .lines .id-player {
   border: 0;
 }
+/* @media (min-width: 993px) and (max-width: 992px) {
+  .icon-vs-gif{
+
+  }
+} */
 @media (min-width: 769px) and (max-width: 992px) {
   .viproom-open {
     flex-direction: column-reverse;
+  }
+  .icon-vs-gif {
+    left: 40%;
   }
 }
 
@@ -7115,6 +7136,9 @@ th {
     padding: 5px 8px 0px 8px !important;
     align-items: center;
   }
+  .icon-vs-gif {
+    left: 42%;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -7128,6 +7152,9 @@ th {
   .lines {
     gap: 10px;
     justify-content: center;
+  }
+  .icon-vs-gif {
+    left: 42%;
   }
 }
 
@@ -7557,7 +7584,7 @@ th {
   font-weight: 400;
   border: 0;
   cursor: pointer;
-  margin-top: 24px;
+  margin-top: 10px;
 }
 
 .open.clicked {
@@ -7797,6 +7824,13 @@ th {
   width: 155px;
 }
 
+.first-round .game-third-block .desc.green {
+  margin-top: auto;
+}
+.first-round .game-first-block .timer.desc {
+  margin-top: auto;
+}
+
 .game-third-block {
   display: flex;
   flex-direction: row;
@@ -7986,7 +8020,7 @@ th {
   border: 1px solid rgb(255, 215, 98);
   border-radius: 10px;
   background: rgb(4, 34, 32);
-  padding: 20px 70px;
+  padding: 10px 70px;
   max-width: fit-content;
 }
 
@@ -8063,6 +8097,10 @@ th {
   font-size: 18px;
   font-weight: 500;
   color: #feffab;
+}
+.price-block .state-text {
+  width: 55px;
+  text-align: center;
 }
 .price-block-adaptive {
   display: none;
@@ -8501,7 +8539,7 @@ th {
     border: 1px solid rgb(255, 215, 98);
     border-radius: 10px;
     background: rgb(4, 34, 32);
-    padding: 20px 0;
+    padding: 10px 0;
     width: 75%;
     align-self: center;
   }
@@ -10173,6 +10211,9 @@ th {
   .poker-room-noplayer .login-footer {
     padding-top: 0;
   }
+  .prompt.status {
+    margin-top: 0px;
+  }
 }
 @media (min-width: 993px) and (max-width: 1200px) {
   .board-support {
@@ -11279,4 +11320,27 @@ th {
   .card-content:hover .card-item-img-adap {
     display: none;
   }
+}
+/*  */
+.stock-container {
+  position: relative;
+  display: inline-block;
+}
+
+.stock-container img {
+  display: block;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: rgb(150, 14, 137);
+  font-family: Gordita;
+  font-size: 13px;
+  font-weight: 700;
+  pointer-events: none;
+  text-transform: uppercase;
 }
