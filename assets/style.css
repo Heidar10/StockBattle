@@ -11367,10 +11367,25 @@ th {
 .stock-container {
   position: relative;
   display: inline-block;
+  transition: transform 0.5s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.stock-container.flip-right {
+  transform: rotateY(180deg);
+}
+
+.stock-container.flip-left {
+  transform: rotateY(-180deg);
 }
 
 .stock-container img {
   display: block;
+}
+
+.stock-container img,
+.stock-container .overlay-text {
+  backface-visibility: hidden;
 }
 
 .overlay-text {
@@ -11385,4 +11400,12 @@ th {
   font-weight: 700;
   pointer-events: none;
   text-transform: uppercase;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.hidden-cards .stock-container.visible {
+  display: flex;
 }

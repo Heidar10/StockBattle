@@ -1123,3 +1123,44 @@ window.addEventListener("load", function () {
   document.querySelector(".loader-background").style.display = "none";
   document.querySelector(".block").style.display = "flex";
 });
+
+//////////////////////
+
+let flipDirection = true;
+
+function replaceImage(container) {
+  const stockContainer = container.querySelector(".stock-container");
+
+  if (stockContainer) {
+    const img = stockContainer.querySelector("img");
+
+    if (img && img.src.includes("green-horse-1.svg")) {
+      const flipClass = flipDirection ? "flip-right" : "flip-left";
+      stockContainer.classList.add(flipClass);
+
+      setTimeout(() => {
+        stockContainer.innerHTML = `
+                    <img src="./assets/images/poker-room/spade.svg" alt="" />
+                    <span class="overlay-text">pep</span>
+                `;
+        stockContainer.classList.remove(flipClass);
+
+        flipDirection = !flipDirection;
+      }, 300);
+    }
+  }
+}
+
+document.querySelectorAll(".open").forEach((button) => {
+  button.addEventListener("click", function (event) {
+    event.stopPropagation();
+    const openHold = this.closest(".open-hold");
+    replaceImage(openHold);
+  });
+});
+
+document.querySelectorAll(".hidden-card-item-btn").forEach((card) => {
+  card.addEventListener("click", function () {
+    replaceImage(this.querySelector(".open-hold"));
+  });
+});
