@@ -1164,3 +1164,21 @@ document.querySelectorAll(".hidden-card-item-btn").forEach((card) => {
     replaceImage(this.querySelector(".open-hold"));
   });
 });
+
+///////////////
+document.addEventListener("DOMContentLoaded", () => {
+  const openButtons = document.querySelectorAll(".open");
+  const holdButtons = document.querySelectorAll(".hold");
+
+  const addStrikethrough = (event) => {
+    event.target.classList.add("strikethrough");
+  };
+
+  openButtons.forEach((button) => {
+    button.addEventListener("click", addStrikethrough);
+  });
+
+  holdButtons.forEach((button) => {
+    button.addEventListener("click", addStrikethrough);
+  });
+});
