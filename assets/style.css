@@ -419,9 +419,7 @@
   .animation {
     gap: 485px;
   }
-  /* .block {
-    height: 100vh !important;
-  } */
+
   .support .block {
     flex-basis: fit-content;
   }
@@ -438,10 +436,6 @@
   .block-1-mybattles .battleroom-background {
     height: 100vh !important;
   }
-
-  /* .battleroom-background.personal-settings {
-    height: auto !important;
-  } */
 }
 @media (min-width: 1920px) {
   .login {
@@ -918,7 +912,6 @@
   height: 100%;
 }
 .background-registration .registration {
-  /* justify-content: space-between; */
   height: 100%;
 }
 .background-registration .login-footer {
@@ -1041,15 +1034,12 @@
 /*/////////////// Page Battleroom open\\\\\\\\\\\\*/
 
 .block {
-  /* display: flex; */
   display: none;
   flex-direction: row;
-  /* height: 100%; */
 }
 .block-support-1 {
   display: flex;
   flex-direction: row;
-  /* height: 100%; */
 }
 
 .header {
@@ -1243,11 +1233,11 @@
   flex-direction: row;
   padding-top: 25px;
   align-items: center;
+  gap: 10px;
   justify-content: center;
 }
 
 .battleroom-logo {
-  padding-right: 20px;
   /* width: 80%; */
   max-width: 150px;
 }
@@ -1421,6 +1411,23 @@
   font-weight: 500;
   line-height: normal;
   text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+.stock-item-btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 250%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  animation: stock-btn-shimmer 2s infinite;
 }
 
 .stock-item-time {
@@ -1475,9 +1482,7 @@
 }
 .prompt-follow {
   width: 360px;
-  /* align-items: center; */
   padding: 10px;
-  /* display: none; */
   flex-direction: column;
   position: absolute;
   gap: 5px;
@@ -1700,7 +1705,6 @@
 }
 .battleroom-open .stock-item {
   width: auto;
-  /* height: 320px; */
   height: 290px;
   padding: 10px;
 }
@@ -1713,6 +1717,14 @@
 
 .battleroom-open .room-sword {
   width: auto;
+}
+
+.battleroom-open .room-sword {
+  transition: transform 0.5s ease-in-out;
+  transform: rotate(180deg);
+}
+.room-sword:hover {
+  transform: rotate(360deg);
 }
 
 .battleroom-open .notice-not-player {
@@ -1813,6 +1825,9 @@
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
+  .battleroom-open .room-sword {
+    transform: rotate(0deg);
+  }
   .battleroom-open .notice-not-player {
     display: none;
   }
@@ -1859,10 +1874,6 @@
     padding: 15px 0;
   }
 
-  .nav-btn.first {
-    background: #123a1c;
-  }
-
   .nav-btn {
     border-radius: 5px;
     width: 240px !important;
@@ -1885,8 +1896,9 @@
     line-height: normal;
   }
   .nav-btn img {
-    width: 28px;
-    height: 28px;
+    position: absolute;
+    left: 5px;
+    width: 50px;
   }
   .text-img {
     display: flex;
@@ -1898,9 +1910,24 @@
     display: flex;
     flex-direction: row;
     gap: 10px;
-    width: 175px;
+    padding-left: 60px;
     align-items: center;
+    position: relative;
   }
+
+  .nav-btn:nth-child(1n) {
+    background-color: #002265;
+  }
+  .nav-btn:nth-child(2n) {
+    background-color: #0f652c;
+  }
+  .nav-btn:nth-child(3n) {
+    background-color: #780664;
+  }
+  .nav-btn:nth-child(4n) {
+    background-color: #6e0f24;
+  }
+
   .nav a {
     max-width: none;
   }
@@ -2065,6 +2092,9 @@
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
+  .battleroom-open .room-sword {
+    transform: rotate(0deg);
+  }
   .prompt.score-points {
     margin-top: 190px;
   }
@@ -2086,7 +2116,18 @@
   .nav-btn {
     width: 240px !important;
   }
-
+  .nav-btn:nth-child(1n) {
+    background-color: #002265;
+  }
+  .nav-btn:nth-child(2n) {
+    background-color: #0f652c;
+  }
+  .nav-btn:nth-child(3n) {
+    background-color: #780664;
+  }
+  .nav-btn:nth-child(4n) {
+    background-color: #6e0f24;
+  }
   .nav a {
     max-width: none;
   }
@@ -2269,10 +2310,6 @@
     padding: 15px 0;
   }
 
-  .nav-btn.first {
-    background: #123a1c;
-  }
-
   .nav-btn {
     border-radius: 5px;
     width: 240px;
@@ -2296,14 +2333,17 @@
   }
 
   .nav-btn img {
-    width: 28px;
-    height: 28px;
+    position: absolute;
+    left: 5px;
+    width: 50px;
   }
   .nav-btn .text-img {
     display: flex;
     flex-direction: row;
     gap: 10px;
-    width: 175px;
+    padding-left: 60px;
+    align-items: center;
+    position: relative;
     align-items: center;
   }
   .text-img {
@@ -2415,6 +2455,9 @@
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
+  .battleroom-open .room-sword {
+    transform: rotate(0deg);
+  }
   .prompt.score-points {
     margin-top: 190px;
   }
@@ -2621,10 +2664,6 @@
     padding: 15px 0;
   }
 
-  .nav-btn.first {
-    background: #123a1c;
-  }
-
   .nav-btn {
     border-radius: 5px;
     width: 100% !important;
@@ -2646,16 +2685,33 @@
     line-height: normal;
     justify-content: center;
   }
+
+  .nav-btn:nth-child(1n) {
+    background-color: #002265;
+  }
+  .nav-btn:nth-child(2n) {
+    background-color: #0f652c;
+  }
+  .nav-btn:nth-child(3n) {
+    background-color: #780664;
+  }
+  .nav-btn:nth-child(4n) {
+    background-color: #6e0f24;
+  }
+
   .nav-btn img {
-    width: 28px;
-    height: 28px;
+    position: absolute;
+    left: 5px;
+    width: 50px;
   }
 
   .nav-btn .text-img {
     display: flex;
     flex-direction: row;
     gap: 10px;
-    width: 175px;
+    padding-left: 60px;
+    align-items: center;
+    position: relative;
     align-items: center;
   }
   .text-img {
@@ -2946,7 +3002,6 @@
   font-size: 19px;
 }
 .notice-not-player-flat .desc {
-  /* width: max-content; */
   display: flex;
   width: 100%;
   height: 100%;
@@ -2970,9 +3025,7 @@
 }
 .room-img {
   max-width: fit-content;
-  /* margin: 0 auto; */
   margin: auto;
-  /* margin-bottom: 10px; */
 }
 
 .room-desc {
@@ -3280,7 +3333,6 @@
 
 .battleroom-open-enter .battleroom-background {
   width: 100%;
-  /* width: 82%; */
 }
 
 .block-score-points .icon {
@@ -3294,14 +3346,12 @@
   padding-left: 85px;
   padding-right: 100px;
   gap: 20px;
-  /* max-inline-size: fit-content; */
   padding-top: 10px;
 }
 .first-block {
   display: flex;
   max-width: 750px;
   width: 100%;
-  /* height: 600px; */
   flex-direction: column;
   gap: 10px;
   border-radius: 10px;
@@ -3353,6 +3403,7 @@
   display: flex;
   flex-direction: row;
   gap: 20px;
+  height: 100%;
 }
 .btn-price {
   display: flex;
@@ -3560,7 +3611,6 @@
   border-radius: 5px;
   border: 1px solid #f8d05f;
   background: rgba(52, 4, 50, 0.9);
-  /* width: 250px; */
   width: 100%;
   height: 40px;
   border-radius: 5px;
@@ -3581,7 +3631,6 @@
   width: 100%;
   background-color: transparent !important;
   text-indent: 10px;
-  /* padding: 6px 10px; */
 }
 ::placeholder {
   color: #fff;
@@ -3629,7 +3678,6 @@ hr {
   flex-direction: row;
   color: white;
   align-items: center;
-  /* text-indent: 10px; */
 }
 
 .join-battle-input-selected {
@@ -3664,8 +3712,24 @@ hr {
   line-height: normal;
   text-decoration: none;
   /* margin-top: 70px; */
+  position: relative;
+  overflow: hidden;
 }
-
+.btn-enter:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 250%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  animation: stock-btn-shimmer 2s infinite;
+}
 .number-players {
   display: flex;
   flex-direction: column;
@@ -3735,11 +3799,9 @@ hr {
     width: 100%;
   }
   .vip-room-img {
-    /* width: 100%; */
     padding-right: 10px;
   }
   .info-battle {
-    /* padding-left: 40px; */
     padding-right: 40px;
   }
   .line .desc {
@@ -4685,10 +4747,8 @@ hr {
 }
 
 .battleroom-filter-menu.leaderboard-padding {
-  /* padding-right: 40px; */
   padding-right: 65px;
   max-width: 1120px;
-  /* margin: 0 auto; */
 }
 .board-section {
   margin-left: 85px;
@@ -4816,6 +4876,19 @@ hr {
 
 .change {
   cursor: pointer;
+  animation: rotateWithPause 2s infinite;
+}
+
+@keyframes rotateWithPause {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 #wallets::after {
   content: url("./images/battleroom-open/arrow.svg");
@@ -4933,7 +5006,6 @@ hr {
   }
   .address {
     font-size: 14px;
-    /* flex-wrap: wrap; */
     justify-content: space-between;
   }
 
@@ -5129,7 +5201,6 @@ hr {
 /*///////////// Page mybattles \\\\\\\\\\\\\\\\*/
 .all-battles {
   display: flex;
-  /* display: none; */
   flex-direction: column;
   padding-left: 85px;
   padding-right: 40px;
@@ -6656,7 +6727,6 @@ th {
     padding-left: 35px;
   }
   .pick-stocks {
-    /* flex-direction: column; */
     gap: 5px;
   }
   .choice-stock {
@@ -8999,14 +9069,14 @@ th {
   content: "";
   position: absolute;
   top: 0;
-  left: -100%;
+  left: -150%;
+  width: 250%;
   height: 100%;
-  width: 100%;
   background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.4) 50%,
-    rgba(255, 255, 255, 0) 100%
+    135deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0) 70%
   );
   animation: stock-btn-shimmer 2s infinite;
 }
@@ -9033,13 +9103,10 @@ th {
 
 @keyframes stock-btn-shimmer {
   0% {
-    left: -100%;
-  }
-  50% {
-    left: 100%;
+    left: -200%;
   }
   100% {
-    left: 100%;
+    left: 200%;
   }
 }
 
@@ -11398,6 +11465,7 @@ th {
   display: inline-block;
   transition: transform 0.5s ease-in-out;
   transform-style: preserve-3d;
+  /* position: relative; */
 }
 
 .stock-container.flip-right {
@@ -11437,4 +11505,19 @@ th {
 
 .hidden-cards .stock-container.visible {
   display: flex;
+}
+.battleroom-rooms .room-img {
+  animation: rotatePause 2s linear infinite;
+}
+
+@keyframes rotatePause {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
