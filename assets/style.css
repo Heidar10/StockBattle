@@ -419,7 +419,9 @@
   .animation {
     gap: 485px;
   }
-
+  /* .block {
+    height: 100vh !important;
+  } */
   .support .block {
     flex-basis: fit-content;
   }
@@ -438,6 +440,9 @@
   }
 }
 @media (min-width: 1920px) {
+  .prompt.score-points {
+    margin-top: 0px !important;
+  }
   .login {
     padding-top: 160px;
   }
@@ -1482,7 +1487,9 @@
 }
 .prompt-follow {
   width: 360px;
+  /* align-items: center; */
   padding: 10px;
+  /* display: none; */
   flex-direction: column;
   position: absolute;
   gap: 5px;
@@ -1705,6 +1712,7 @@
 }
 .battleroom-open .stock-item {
   width: auto;
+  /* height: 320px; */
   height: 290px;
   padding: 10px;
 }
@@ -1910,9 +1918,11 @@
     display: flex;
     flex-direction: row;
     gap: 10px;
+    /* width: 175px; */
     padding-left: 60px;
     align-items: center;
     position: relative;
+    /* justify-content: end; */
   }
 
   .nav-btn:nth-child(1n) {
@@ -2333,6 +2343,8 @@
   }
 
   .nav-btn img {
+    /* width: 28px;
+    height: 28px; */
     position: absolute;
     left: 5px;
     width: 50px;
@@ -2341,6 +2353,7 @@
     display: flex;
     flex-direction: row;
     gap: 10px;
+    /* width: 175px; */
     padding-left: 60px;
     align-items: center;
     position: relative;
@@ -2700,6 +2713,8 @@
   }
 
   .nav-btn img {
+    /* width: 28px;
+    height: 28px; */
     position: absolute;
     left: 5px;
     width: 50px;
@@ -2709,6 +2724,7 @@
     display: flex;
     flex-direction: row;
     gap: 10px;
+    /* width: 175px; */
     padding-left: 60px;
     align-items: center;
     position: relative;
@@ -3002,6 +3018,7 @@
   font-size: 19px;
 }
 .notice-not-player-flat .desc {
+  /* width: max-content; */
   display: flex;
   width: 100%;
   height: 100%;
@@ -3025,7 +3042,9 @@
 }
 .room-img {
   max-width: fit-content;
+  /* margin: 0 auto; */
   margin: auto;
+  /* margin-bottom: 10px; */
 }
 
 .room-desc {
@@ -3333,6 +3352,7 @@
 
 .battleroom-open-enter .battleroom-background {
   width: 100%;
+  /* width: 82%; */
 }
 
 .block-score-points .icon {
@@ -3346,12 +3366,14 @@
   padding-left: 85px;
   padding-right: 100px;
   gap: 20px;
+  /* max-inline-size: fit-content; */
   padding-top: 10px;
 }
 .first-block {
   display: flex;
   max-width: 750px;
   width: 100%;
+  /* height: 600px; */
   flex-direction: column;
   gap: 10px;
   border-radius: 10px;
@@ -3611,6 +3633,7 @@
   border-radius: 5px;
   border: 1px solid #f8d05f;
   background: rgba(52, 4, 50, 0.9);
+  /* width: 250px; */
   width: 100%;
   height: 40px;
   border-radius: 5px;
@@ -3631,6 +3654,7 @@
   width: 100%;
   background-color: transparent !important;
   text-indent: 10px;
+  /* padding: 6px 10px; */
 }
 ::placeholder {
   color: #fff;
@@ -3678,6 +3702,7 @@ hr {
   flex-direction: row;
   color: white;
   align-items: center;
+  /* text-indent: 10px; */
 }
 
 .join-battle-input-selected {
@@ -3799,9 +3824,11 @@ hr {
     width: 100%;
   }
   .vip-room-img {
+    /* width: 100%; */
     padding-right: 10px;
   }
   .info-battle {
+    /* padding-left: 40px; */
     padding-right: 40px;
   }
   .line .desc {
@@ -4747,8 +4774,10 @@ hr {
 }
 
 .battleroom-filter-menu.leaderboard-padding {
+  /* padding-right: 40px; */
   padding-right: 65px;
   max-width: 1120px;
+  /* margin: 0 auto; */
 }
 .board-section {
   margin-left: 85px;
@@ -5006,6 +5035,7 @@ hr {
   }
   .address {
     font-size: 14px;
+    /* flex-wrap: wrap; */
     justify-content: space-between;
   }
 
@@ -5201,6 +5231,7 @@ hr {
 /*///////////// Page mybattles \\\\\\\\\\\\\\\\*/
 .all-battles {
   display: flex;
+  /* display: none; */
   flex-direction: column;
   padding-left: 85px;
   padding-right: 40px;
@@ -6727,6 +6758,7 @@ th {
     padding-left: 35px;
   }
   .pick-stocks {
+    /* flex-direction: column; */
     gap: 5px;
   }
   .choice-stock {
@@ -7221,11 +7253,7 @@ th {
 .lines .id-player {
   border: 0;
 }
-/* @media (min-width: 993px) and (max-width: 992px) {
-  .icon-vs-gif{
 
-  }
-} */
 @media (min-width: 769px) and (max-width: 992px) {
   .viproom-open {
     flex-direction: column-reverse;
@@ -7834,14 +7862,15 @@ th {
 }
 
 .first-round {
-  display: flex;
-  /* display: none; */
+  /* display: flex; */
+  display: none;
   flex-direction: column;
   gap: 10px;
   align-items: center;
 }
 .second-round {
-  display: none;
+  display: flex;
+  /* display: none; */
   flex-direction: column;
   gap: 10px;
   align-items: center;
@@ -7897,7 +7926,6 @@ th {
 
 .game-hr {
   background: rgb(167, 144, 76);
-  /* width: 100%; */
   width: 80%;
   height: 1px;
 }
@@ -7921,8 +7949,16 @@ th {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* gap: 40px; */
   gap: 63px;
+}
+
+.first-round .game-first-block {
+  justify-content: end;
+}
+
+.first-round .game-first-block,
+.first-round .game-third-block {
+  width: 155px;
 }
 
 .second-round .game-second-block {
@@ -7940,13 +7976,11 @@ th {
 .sixth-round .game-second-block {
   gap: 20px;
 }
-.first-round .game-first-block {
-  justify-content: end;
+.first-round .game-third-block .desc.green {
+  margin-top: auto;
 }
-
-.first-round .game-first-block,
-.first-round .game-third-block {
-  width: 155px;
+.first-round .game-first-block .timer.desc {
+  margin-top: auto;
 }
 .third-round .game-first-block,
 .third-round .game-third-block {
@@ -7963,13 +7997,6 @@ th {
 .sixth-round .game-first-block,
 .sixth-round .game-third-block {
   width: 155px;
-}
-
-.first-round .game-third-block .desc.green {
-  margin-top: auto;
-}
-.first-round .game-first-block .timer.desc {
-  margin-top: auto;
 }
 
 .game-third-block {
@@ -8019,16 +8046,10 @@ th {
 
 .third-round .player-firs-sec-round {
   height: 100%;
-  justify-content: start;
 }
-.third-round .player-firs-sec-round .score {
-  margin-top: 140px;
-}
+
 .third-round .game-second-block .player-firs-sec-round .score {
   margin-top: 0px;
-}
-.third-round .game-third-block .score {
-  margin-top: 133px;
 }
 
 .third-round .first-player .row2:first-of-type {
@@ -8038,17 +8059,7 @@ th {
   display: none;
 }
 
-.fourth-round .game-first-block .score {
-  margin-top: auto;
-}
-.fourth-round .game-third-block .score {
-  margin-top: auto;
-}
-.fourth-round .game-first-block .timer {
-  margin-top: auto;
-}
 .fourth-round .game-third-block .player-firs-sec-round .desc:last-child {
-  margin-top: auto;
   text-align: center;
 }
 
@@ -8059,12 +8070,7 @@ th {
 .fifth-round .first-player .row2 {
   display: none;
 }
-.fifth-round .game-third-block .score {
-  margin-top: auto;
-}
-.fifth-round .game-first-block .timer {
-  margin-bottom: auto;
-}
+
 .fifth-round .game-first-block .score {
   margin-top: 10px;
 }
@@ -8073,21 +8079,6 @@ th {
   text-align: center;
 }
 .fifth-round .player-firs-sec-round .desc:last-child {
-  margin-bottom: auto;
-  text-align: center;
-}
-
-.sixth-round .game-first-block .score {
-  margin-top: auto;
-}
-.sixth-round .game-third-block .score {
-  margin-top: auto;
-}
-.sixth-round .game-first-block .timer {
-  margin-top: auto;
-}
-.sixth-round .game-third-block .player-firs-sec-round .desc:last-child {
-  margin-top: auto;
   text-align: center;
 }
 
@@ -8204,7 +8195,6 @@ th {
 }
 .game-btn .stockvsstock-button-item {
   display: flex;
-  /* align-items: center; */
   align-items: end;
   gap: 10px;
   box-sizing: border-box;
@@ -8303,16 +8293,16 @@ th {
 .info-round-adaptive {
   display: none;
 }
-.first-round .third-player .row2 {
-  display: none;
-}
+
 .game-second-block .game-hr {
   display: none;
 }
 .fourth-round .third-player .row2:last-of-type {
   display: none;
 }
-
+.first-round .third-player .row2 {
+  display: none;
+}
 .time-name .row2 {
   display: flex !important;
 }
@@ -8349,22 +8339,32 @@ th {
   .first-round .open {
     margin-top: 0px;
   }
-
+  .first-round .game-second-block {
+    gap: 75px;
+  }
   .game-hr {
     width: 100%;
   }
   .game-second-block .game-hr {
     margin-top: 20px;
   }
-  .first-round .game-second-block {
-    gap: 75px;
-  }
 }
 @media (min-width: 481px) and (max-width: 768px) {
   .price-block .state-text {
     display: none;
   }
-
+  .first-round .open {
+    margin-top: 0;
+  }
+  .first-round .game-first-block,
+  .first-round .game-third-block {
+    display: none;
+  }
+  .first-round .third-player .row2 {
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+  }
   .player-firs-sec-round-adaptive-column {
     display: flex;
     flex-direction: column;
@@ -8421,13 +8421,7 @@ th {
   .game-second-block .game-hr {
     margin-top: 20px;
   }
-  .first-round .open {
-    margin-top: 0;
-  }
-  .first-round .game-first-block,
-  .first-round .game-third-block {
-    display: none;
-  }
+
   .sixth-round .game-first-block,
   .sixth-round .game-third-block {
     width: 100%;
@@ -8511,11 +8505,7 @@ th {
   .fourth-round .game-third-block .player-firs-sec-round .desc:last-child {
     font-size: 10px;
   }
-  .first-round .third-player .row2 {
-    justify-content: space-between;
-    width: 100%;
-    display: flex;
-  }
+
   .second-round .fourth-player-adaptive .row2 {
     justify-content: space-between;
     width: 100%;
@@ -8582,6 +8572,18 @@ th {
   .third-round .game-second-block .game-hr {
     margin-top: 0px;
   }
+  .first-round .open {
+    margin-top: 0;
+  }
+  .first-round .third-player .row2 {
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+  }
+  .first-round .game-first-block,
+  .first-round .game-third-block {
+    display: none;
+  }
   .fourth-round .game-second-block .game-hr {
     margin-top: 0px;
   }
@@ -8630,18 +8632,7 @@ th {
   .sixth-round .game-second-block .game-hr {
     margin-top: 10px;
   }
-  .first-round .open {
-    margin-top: 0;
-  }
-  .first-round .third-player .row2 {
-    justify-content: space-between;
-    width: 100%;
-    display: flex;
-  }
-  .first-round .game-first-block,
-  .first-round .game-third-block {
-    display: none;
-  }
+
   .third-player .hidden-card-item {
     flex-direction: column;
   }
@@ -9959,8 +9950,6 @@ th {
   .list-2 .stock-btn {
     width: 100%;
     background-color: #31297f;
-    /* margin-top: 10px;
-    margin-bottom: 10px; */
   }
   .address span {
     overflow: hidden;
