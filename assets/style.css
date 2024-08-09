@@ -7809,9 +7809,6 @@ th {
 .game-second-block .player {
   width: 100%;
 }
-.game-second-block .score {
-  margin-right: 40px;
-}
 
 .time-name {
   display: flex;
@@ -7862,22 +7859,20 @@ th {
 }
 
 .first-round {
-  /* display: flex; */
-  display: none;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-}
-.second-round {
   display: flex;
   /* display: none; */
   flex-direction: column;
   gap: 10px;
   align-items: center;
 }
+.second-round {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
 .third-round {
   display: none;
-
   flex-direction: column;
   gap: 10px;
   align-items: center;
@@ -7895,7 +7890,6 @@ th {
   align-items: center;
 }
 .sixth-round {
-  /* display: flex; */
   display: none;
   flex-direction: column;
   gap: 10px;
@@ -7933,13 +7927,10 @@ th {
 .game-blocks {
   display: flex;
   flex-direction: row;
-  gap: 50px;
+  gap: 10px;
   align-self: center;
 }
 
-.second-round .game-blocks {
-  gap: 20px;
-}
 .game-first-block {
   display: flex;
   flex-direction: row;
@@ -7976,11 +7967,9 @@ th {
 .sixth-round .game-second-block {
   gap: 20px;
 }
-.first-round .game-third-block .desc.green {
-  margin-top: auto;
-}
-.first-round .game-first-block .timer.desc {
-  margin-top: auto;
+
+.first-round .game-first-block .desc.green {
+  text-align: center;
 }
 .third-round .game-first-block,
 .third-round .game-third-block {
@@ -8113,6 +8102,10 @@ th {
   flex-direction: column;
 }
 
+.third-player .row2:last-of-type {
+  justify-content: space-between;
+  width: 100%;
+}
 .player-firs-sec-round .game-icon {
   transform: rotate(0deg) !important;
 }
@@ -8122,7 +8115,7 @@ th {
   gap: 20px;
   height: fit-content;
   margin-bottom: auto;
-  margin-top: 43px;
+  margin-top: 50px;
 }
 .third-player {
   display: flex;
@@ -8136,11 +8129,15 @@ th {
   gap: 20px;
   height: fit-content;
   margin-bottom: auto;
-  margin-top: 43px;
+  margin-top: 50px;
 }
 
-.second-round .fourth-player {
-  margin-top: 43px;
+.second-player .desc.green {
+  text-align: center;
+}
+.second-player-adaptive .row2 {
+  justify-content: space-between;
+  width: 100%;
 }
 
 .row {
@@ -8306,6 +8303,9 @@ th {
 .time-name .row2 {
   display: flex !important;
 }
+.row2.adaptive {
+  display: none;
+}
 @media (min-width: 993px) and (max-width: 1200px) {
   .section-game {
     margin-left: 30px;
@@ -8315,12 +8315,37 @@ th {
   .info-round-adaptive {
     display: none;
   }
+  .first-player .desc.green br {
+    display: none;
+  }
+
+  .game-second-block .player-firs-sec-round .desc.green {
+    width: 165px;
+  }
+  .game-second-block .player-firs-sec-round .score .desc.green {
+    width: auto;
+  }
+  .third-player .desc.green br {
+    display: none;
+  }
 }
 @media (min-width: 769px) and (max-width: 992px) {
+  .game-second-block .player-firs-sec-round .desc.green {
+    width: 165px;
+  }
+  .game-second-block .player-firs-sec-round .score .desc.green {
+    width: auto;
+  }
   .second-round .open {
     margin-top: 0px;
   }
 
+  .first-player .desc.green br {
+    display: none;
+  }
+  .third-player .desc.green br {
+    display: none;
+  }
   .section-game {
     margin: 0;
     margin-top: 10px;
@@ -8350,6 +8375,14 @@ th {
   }
 }
 @media (min-width: 481px) and (max-width: 768px) {
+  .row2.adaptive {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .game-second-block .score {
+    margin-right: 40px;
+  }
   .price-block .state-text {
     display: none;
   }
@@ -8419,7 +8452,7 @@ th {
     margin-top: 0px;
   }
   .game-second-block .game-hr {
-    margin-top: 20px;
+    margin-top: 0px;
   }
 
   .sixth-round .game-first-block,
@@ -8557,10 +8590,18 @@ th {
     align-self: center;
   }
   .sixth-round .game-second-block .game-hr {
-    margin-top: 10px;
+    margin-top: 0px;
   }
 }
 @media (min-width: 320px) and (max-width: 480px) {
+  .row2.adaptive {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .game-second-block .score {
+    margin-right: 40px;
+  }
   .fourth-round .third-player .row2:last-of-type {
     display: flex;
   }
@@ -8627,10 +8668,10 @@ th {
     gap: 40px;
   }
   .game-second-block .game-hr {
-    margin-top: 20px;
+    margin-top: 0px;
   }
   .sixth-round .game-second-block .game-hr {
-    margin-top: 10px;
+    margin-top: 0px;
   }
 
   .third-player .hidden-card-item {
